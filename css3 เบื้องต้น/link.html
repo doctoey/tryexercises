@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Link</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        a:link{
+            color: red;
+        /* ยังไม่ถูกคลิก */
+        }
+        a:visited{
+            color: black;
+        /* ถูกคลิกแล้ว */
+        }
+        a:hover{
+            color: pink;
+            background-color: black;
+            text-decoration: underline;
+            /* เมื่อนำเมาส์ไปวาง */
+        }
+        a:active{
+            color: blueviolet;
+            background-color: aquamarine;
+            /* ขณะถูกคลิก */
+        }
+    </style>
+    </head>
+    <body>
+    <a href="/index.html">home</a>
+    <a href="http://www.google.com" target="_blank">google</a>
+    <a href="http://wwww.facebook.com" target="_blank">facebook</a>
+    <a href="http://www.youtube.com" target="_blank">youtube</a>
+    </body>
+</html>

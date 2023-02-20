@@ -1,0 +1,33 @@
+li{
+    padding: 0.25rem;
+    margin: 0.25rem;
+    list-style: none;
+}
+/* นับจากบนลงล่าง */
+li:first-child{
+    background-color: red;
+}
+li:last-child{
+    background-color: blueviolet;
+}
+li:nth-child(4){
+    background-color: green
+}
+li:nth-child(10){
+    background-color: aquamarine
+}
+
+/* นับจากล่างขึ้นบน */
+/* อันนี้คือตัวที่ 18 นั่นเอง */
+li:nth-last-child(3){
+    background-color: darkgoldenrod;
+}
+
+/* เปลี่ยนสไตล์ทุกๆ 3 ตัว ทำไง เขียนงี้ */
+li:nth-child(3n){
+    /* อันนี้เริ่มต้นที่เลข 3 */
+    background-color: hotpink;
+    /* ถ้า 3n+1 คือทุก 3 ตัวเหมือนเดิม แต่ให้เริ่มต้นที่เลข 1 */
+}
+/* เปลี่ยนเฉพาะเลขคี่ nth-child(odd) */
+/* เปลี่ยนเฉพาะเลขคู่ nth-child(event) */

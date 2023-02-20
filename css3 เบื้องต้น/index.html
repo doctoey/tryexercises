@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <title>CSS FORMAT</title>
+        <style>
+            /* internal embed */
+            p{
+                font-style:italic ;
+                font-family: 'Itim', cursive;
+
+                /* font-family itim มาจากข้างนอก */
+            }
+            .title{
+                font-size:x-large;
+                font-weight: 400;
+                font-style: oblique;
+                text-decoration: underline;
+                text-align: justify;
+                
+            }
+            .message{
+                font-size: 20px;
+                
+            }
+            #dedo{
+                text-align: right;
+                color:rgb(48, 150, 102);
+            }
+            .shadowimg{
+                width: 150px;
+                box-shadow: 10px 10px 10px 8px rebeccapurple;
+                /* x y blur(ความมัว ยิ่งค่าเยอะยิ่งฟุ้งมาก) spread(ขนาดเงา) color */
+            }
+            div{
+                width: 150px;
+                height: 150px;
+                border: 1px solid black;
+                margin-top: 100px;
+                box-shadow: 5px -10px 10px 7px rgb(126, 175, 153),
+                            -5px 10px 10px 7px rgb(215, 62, 156);
+                            /* ใส่ คอมม่า(,) ได้เงาสองฝั่ง */
+            }
+            h1#sha{
+                margin-top: 50px;
+                box-shadow: 5px -10px 10px 7px rgb(126, 175, 153),
+                            -5px 10px 10px 7px rgb(215, 62, 156);
+            }
+            .img-1{
+                width: 150px;
+                opacity: 0.5;
+            }
+            .img-2{
+                width: 150px;
+                opacity: 0.7;
+            }
+            .img-2:hover{
+                opacity: 1;
+                /* พอเอาเมาส์วางรูป 2 opa กลายเป็น 1 */
+            }
+            .img-3{
+                width: 150px;
+                opacity: 1.0;
+                /* ยิ่งค่าน้อยยิ่งจาง */
+            }
+        </style>
+        <!-- external  -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- inline -->
+    <p style="color:rgb(255,0,80);font-weight: bolder;">Cheewathun</p>
+    <p class="message">lora mamakakakttrsf qropgjdisvsccf asdo rofka</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, similique.</p>
+    <h1 style="color:#e3c332">Cheewathun</h1>
+    <h1 class="title">CSSSSSSSS normal covid wyhan</h1>
+    <p id="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ab.</p>
+    <p id="dedo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores incidunt facilis hic iure? Architecto nemo, quasi earum, adipisci dicta eligendi voluptas voluptates reiciendis eum modi est aperiam iste eveniet voluptatem?</p>
+
+    <img src="https://pbs.twimg.com/media/FnzHm5wakAAfxvu?format=jpg&name=large" alt="" class="shadowimg">
+    <div></div> 
+    <h1 id="sha">Cheewathun</h1>
+
+    <img src="https://pbs.twimg.com/media/FnzUG-daAAMAdeF?format=jpg&name=large" alt="" class="img-1">
+    <img src="https://pbs.twimg.com/media/FnzUG-daAAMAdeF?format=jpg&name=large" alt="" class="img-2">
+    <img src="https://pbs.twimg.com/media/FnzUG-daAAMAdeF?format=jpg&name=large" alt="" class="img-3">
+</body>
+</html>

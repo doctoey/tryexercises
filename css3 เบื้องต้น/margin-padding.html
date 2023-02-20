@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS Unit Ex Margin</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            /* คำนวนระยะห่างระหว่าง เนื้อหา กับ เส้นขอบ เรียก padding
+ระยะห่างระหว่างขอบ กับ element อื่นๆ margin */
+        body{
+            background-color: antiquewhite;
+        }
+        div{
+            border: 2px dashed orange;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            
+        }
+        .box-1{
+            margin-left: 20px;
+            background-color:wheat
+        }
+        .box-2{
+            margin-right: 30px;
+            padding-top: 5px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            /* margin ทำนอกกรอบ
+            padding ทำข้างในกรอบ */
+            color: whitesmoke;
+            background-color: rgba(43, 37, 37, 0.39);
+        }
+        .box-3{
+            margin: 5px 10px 15px 20px;
+            /* ลำดับmargin + padding คือ top right bottom left */
+            color: azure;
+            background-image:url(https://p4.wallpaperbetter.com/wallpaper/657/918/354/himalaya-afterglow-mountain-himalayas-wallpaper-preview.jpg) ;
+        
+        }
+        .box-4{
+            padding: 5px 10px 15px 20px;
+            /* box-2 กับ 4 padding เท่ากัน แค่ย่อกับเต็ม */
+            background-image: url(https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/327712033_983094226428695_557988084546387438_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGk8dzrwOhwxWOviZwggULsltbjMxt38eaW1uMzG3fx5pClCthzpEq0vF4d12jeT-jPi7wmrPqTugbbQvjVRvI4&_nc_ohc=jdRoor9juoYAX8TdIiG&_nc_ht=scontent.fbkk28-1.fna&oh=00_AfBqomh9g2EivPdCKNUnDvxJLk2S5N0o5z8uwfw7QB7fDQ&oe=63DBEFB2);
+            color: aliceblue;
+        }
+        img{
+            width: 100px;
+            margin-left: 10px;
+            margin-top: 50px;
+        }
+
+        </style>
+    </head>
+    <body>
+    <div class="box-1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Aspernatur esse nobis deserunt quasi sequi expedita?</p>
+    </div>
+    <div class="box-2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Hic at rem itaque, qui consequuntur numquam!</p>
+    </div>
+    <div class="box-3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Sed facilis tempore, cupiditate distinctio reiciendis dolor.</p>
+    </div>
+    <div class="box-4">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Corrupti ea et excepturi fugiat dolorum aliquam?</p>
+    </div>
+    <img src="https://pbs.twimg.com/profile_images/1288476234221891586/qllOkjKA_400x400.jpg" alt="">
+    <img src="https://pbs.twimg.com/profile_images/1365879828285652993/aqmB4ilJ_400x400.jpg" alt="">
+    <img src="https://pbs.twimg.com/profile_images/1604834785742192640/eC4L8LK6_400x400.jpg" alt="">
+</body>
+</html>

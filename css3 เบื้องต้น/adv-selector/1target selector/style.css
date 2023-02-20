@@ -1,0 +1,15 @@
+p{
+ /* p ทั้งหมดเป็นสีส้ม */
+    background-color: orange;
+}
+
+/*  descendant selector เว้นวรรค */
+div p{
+    /* อันนี้คือ p ที่อยู่ในแท็ก div เป็นสีฟ้า นอก div ไม่เกี่ยว */
+    background-color: aqua;
+}
+/* child selector เครื่องหมายมากกว่า*/
+div>p{
+    /* อันนี้คือ แท็ก p ที่อยู่ใน div เท่านั้น */
+    background-color: blueviolet;
+}

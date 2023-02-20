@@ -1,0 +1,55 @@
+body{
+    background-color: dimgray;
+    color: white;
+    text-align: center;
+    padding: 100px;
+}
+h1{
+    display: none;
+}
+
+/* smartphone */
+@media only screen and (max-width:500px){
+    body{
+        background-color:red;
+    }
+    #smartphone h1{
+        display: block;
+    }
+}
+/* tablets */
+@media only screen and (min-width:501px) and (max-width:768px){
+    body{
+        background-color: blueviolet;
+    }
+    #tablets h1{
+        display: block;
+    }
+}
+/* normal laptop desktop ปกติ*/
+@media only screen and (min-width:769px) and (max-width:1200px){
+    body{
+        background-color: aquamarine;
+    }
+    #normal h1{
+        display: block;
+    }
+}
+/* widescreen */
+@media only screen and (min-width:1201px){
+    body{
+        background-color: orange;
+    }
+    #widescreen h1{
+        display: block;
+    }
+}
+/* landscape */
+@media only screen and (max-height:500px){
+    body{
+        background-color: indianred;
+    }
+    #landscape h1{
+        display: block;
+    }
+}

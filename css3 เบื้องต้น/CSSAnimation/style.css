@@ -1,0 +1,70 @@
+body{
+    background-color: #333;
+}
+.box{
+    background-color: azure;
+    width: 100px;
+    height: 100px;
+    /* name duration timing-function delay iteration-count direction fill-mode; */
+    animation-name: animate-1;
+    animation-duration: 2s;
+  
+    animation-iteration-count: infinite; 
+      /* ให้เล่นไปเรื่อยๆ */
+    animation-direction:alternate; 
+    animation-timing-function:ease-in ;
+}
+
+@keyframes animate-1{
+    from{
+        width: 100px;
+    }
+    to{
+        width: 200px;
+    }
+}
+
+.box-2{
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    position: relative;
+    animation-name: animate-2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in ;
+}
+
+@keyframes animate-2{
+    0%{
+        top:0;
+        left:0;
+        transform: rotate(0deg);
+    }
+    25%{
+        top:0;
+        left:300px;
+        transform: rotate(45deg);
+        background-color: rgb(83, 251, 195);
+    }
+    50%{
+        top: 300px;
+        left:300px;
+        transform: rotate(90deg);
+        background-color: rgb(53, 249, 183);
+    }
+    75%{
+        top:300px;
+        left:0;
+        transform: rotate(135deg);
+        background-color: rgb(33, 249, 177);
+        
+    }
+    100%{
+        top:0;
+        left:0;
+        transform: rotate(180deg);
+        background-color: rgb(0, 249, 166);
+    }
+}

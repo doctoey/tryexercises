@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Float</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+            /* ให้ทุกๆ element คำนวนออกมาตามค่าจริงที่เราระบุไป */
+            }
+            img{
+                width: 150px;
+            }
+            .box-1 img{
+                float: left;
+            }
+            .box-2 img{
+                float: right;
+            }
+            .box-3 img{
+                float: none;
+            }
+            .container{
+                width: 960px;
+                margin: 30px auto;
+            }
+            body{
+                line-height: 1.4em;
+            }
+            .box{
+                background: rgb(185, 176, 176);
+                border:1px solid #333;
+                padding: 10px;
+                margin-bottom :15px; ;
+            }
+            #box-5{
+                float: left;
+                width: 70%;
+            }
+            #box-6{
+                float: right;
+                width: 30%;
+            }
+            .clr{
+                clear: both;
+            /* ไม่ให้ลอยยยยยย ตรง title 4 */
+            }
+        </style>
+    </head>
+    <body>
+    <div class="box-1">
+        <p>
+        <img src="https://cdn.topstarnews.net/news/photo/202301/15061565_1068631_2456.jpg" width="150px" alt="">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam explicabo, facilis voluptate modi quod at reiciendis doloribus et necessitatibus ipsa.
+    </p>
+    </div>
+    <div class="box-2">
+        <p>
+        <img src="https://pbs.twimg.com/media/FnxZo-laYAIOB2v?format=jpg&name=large" width="150px" alt="">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam explicabo, facilis voluptate modi quod at reiciendis doloribus et necessitatibus ipsa.
+    </p>
+    </div>
+    <div class="box-3">
+        <p>
+        <img src="https://pbs.twimg.com/media/FnxLRTaaMAA0K9g?format=jpg&name=medium" width="150px" alt="">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam explicabo, facilis voluptate modi quod at reiciendis doloribus et necessitatibus ipsa.
+    </p>
+    </div>
+
+
+
+    <hr>
+<div class="container">
+    <div id="box-4" class="box">
+        <h1>Title 1</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ut labore, non enim perspiciatis tenetur!</p>
+    </div>
+     <div id="box-5" class="box">
+        <h1>Title 2</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ut labore, non enim perspiciatis tenetur!</p>
+    </div>
+    <div id="box-6" class="box">
+        <h1>Title 3</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ut labore, non enim perspiciatis tenetur!</p>
+    </div>
+    <div class="clr"></div>
+    <div id="box-7" class="box">
+        <h1>Title 4</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ut labore, non enim perspiciatis tenetur!</p>
+    </div>
+</div> 
+
+    </body>
+</html>

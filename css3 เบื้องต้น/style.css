@@ -1,0 +1,12 @@
+p#message{
+    color: plum;
+}
+h1.title{
+    color:rgb(92, 195, 92)
+}
+
+/* Google Font API */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+#message{
+    font-family: 'Itim', cursive;
+}

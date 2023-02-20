@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Position</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            html{
+                scroll-behavior: smooth;
+                /* ทำให้ตอนกดลิ้ง ค่อยๆเลื่อนลงอย่างสมู้ทททท */
+            }
+            body{
+                height:4000px ;
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+            }
+            a:hover{
+                cursor: crosshair;
+                /* เปลี่ยนเมาส์ */
+            }
+            #box-1{
+                background-color: orange;
+                position: relative;
+                /* ค่าเริ่มต้น static */
+                left: 50px;
+                /* ออกจากตำแหน่งเดิม ซ้ายมือ 50px */
+                top: 50px;
+                 /* ออกจากตำแหน่งเดิม ข้างบน 50px มีค่าติดลบได้ */
+                z-index: 1;
+                /* ย้าย block 1 (สีส้ม) มาอยู่กล่องที่ 1 (กล่องแรก) */
+                }
+            #box-2{
+                background-color: greenyellow;
+                position: absolute;
+                top: 100px;
+                left: 50px;
+                /* container ครอบ(สีเทา) ระยะ 500 px ขยับได้ในนั้น */
+            }
+            #box-3{
+                background-color: plum;
+                position: absolute;
+                top: 200px;
+                right: 50px;
+                /* container ครอบ(สีเทา) ระยะ 500 px ขยับได้ในนั้น (เหมือนข้างบน) */
+            }
+            #box-4{
+                background-color: aquamarine;
+                position: fixed;
+                /* ตาม scroll ไปเรื่อยยยยยๆ ไม่ขยับ อยู่ตำแน่งเดิม */
+            }
+            #box-5{
+                background-color: brown;
+                position: sticky;
+                top: 0;
+                /* ติดขอบ scroll อยู่ข้างบน (ติดไปเรื่อยๆ) */
+            }
+            #box-6{
+                background-color: yellow;
+                margin-top: 500px;
+                position: sticky;
+                top: 0px;
+            }
+            .container{
+                position: relative;
+                width: 500px;
+                height: 300px;
+                background: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#box-5">box-5</a>
+        <a href="#box-6">box-6</a>
+    <div id="box-1" class="box"></div>
+    <div class="container">
+        <div id="box-2" class="box"></div>
+        <div id="box-3" class="box"></div>
+    </div>
+    <div id="box-4" class="box"></div>
+    <div id="box-5" class="box"></div>
+    <div id="box-6" class="box"></div>
+    </body>
+</html>

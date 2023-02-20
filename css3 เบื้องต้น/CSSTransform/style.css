@@ -1,0 +1,33 @@
+body{
+    background-color: darkslategray;
+    
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+    margin: 30px;
+/* ย้ายตำแหน่งกล่อง พิกัดเริ่มต้นคือ 0,0 */
+    /* transform: translate(150px,100px); */
+    transform: rotate(20deg);
+
+}
+.box-2{
+    width: 100px;
+    height: 100px;
+    margin: 155px;
+    background-color: pink;
+    border: 2px solid black;
+    transform: scale(2,2);
+}
+.box-3{
+    width: 100px;
+    height: 100px;
+    margin: 155px;
+    background-color: palegoldenrod;
+    border: 2px solid black;
+    transform: skewX(15deg);
+    transform: skewY(30deg);
+    /* หรือจะเขียน transform: skew(15deg,30deg); */
+}

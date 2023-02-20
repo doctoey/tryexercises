@@ -1,0 +1,26 @@
+body{
+    background-color :#333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.box{
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    /* transition-property: background-color;
+    transition-property: width ;
+    transition-duration: 2s ;
+    transition-timing-function: ease-in;
+    transition-delay: 1s; */
+ /* ถ้าจะเขียนแบบย่อ(บรรทัดเดียว) */
+    transition: background-color 2s , width 2s , border-radius 3s ease-in 1s;
+
+
+}
+.box:hover{
+    background-color: red;
+    width:200px;
+    border-radius: 15px;
+}

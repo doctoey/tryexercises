@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+.flex-container{
+    display: flex;
+    background-color: aquamarine;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    /* justifycontene ลิ้งกับ flexdirection */
+    align-items: center;
+    height: 50vh;
+}
+.item{
+    background: orange;
+    border: 1px solid black;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+.item-2{
+    flex-grow: 1;
+    align-self: flex-end;
+}

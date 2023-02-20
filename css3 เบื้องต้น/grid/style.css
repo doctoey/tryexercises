@@ -1,0 +1,33 @@
+.grid-container{
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    /* row แถว แนวนอน */
+    grid-template-columns: repeat(3,auto);
+    /* auto auto auto เขียนเป็น repeat(3,auto)  */
+    /* column แนวตั้ง */
+}
+.item{
+    padding: 3rem;
+    border: 1px solid #ccc;
+    background: orange;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+.item:first-child{
+    /* ไอเท็มชิ้นแรก first-child */
+    background-color: cadetblue;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column: 1/span 2;
+
+    /* ใน 4 ช่อง จะมี 4 เส้น เส้นแนวตั้งเลยเรียกคอลั่ม นับจากต้น เส้น 1,3 ก็คือกล่องที่ 1 2 นั่นแล */
+    /* grid-row-start: 1; */
+    /* grid-row-end: 4; */
+    /* หรือจะเขียน grid-row:1/4 */
+}
+.item:last-child{
+    background-color: palevioletred;
+    grid-column:1/4;
+
+}
