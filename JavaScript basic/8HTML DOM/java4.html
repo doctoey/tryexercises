@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="mystyle4.css" rel="stylesheet">
+    </script>
+
+    </head>
+    <body onload="welcome()"> <!--เมื่อโหลดหน้าเว็บ-->
+    <h1>Cheewathun 8.4 </h1>
+
+        <div id="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, repellendus.</p>
+        </div>
+        <button onclick="addDarkmode()">เพิ่ม style</button>
+        <button onclick="remDarkmode()">ลบ style</button>
+        <button onclick="swiDarkmode()">สลับ style</button>
+        
+    <label for="">ชื่อ</label>
+    <input type="text" placeholder="ป้อนชื่อของคุณ" onfocus="hightlight(this)" onblur="unhightlight(this)"> <!--เมื่อจ่อเมาส์ไปหา this คือตอนเอาเมาส์ไปวาง จะโฟกัสเป็นฟ้า เอาเมาส์ออกดำ--> 
+<hr>
+        <label for="">เลือกเลย เลือกเถอะ</label>
+        <select name="" id="menu" onchange="getmenu()">   <!--เมื่อมีการเปลี่ยนตัวเลือก-->
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="Bootstrap">Bootstrap</option>
+        </select>
+        <p id="display"></p>
+
+    <a href="" onmouseover="hightlightm(this)" onmouseout="hightlighto(this)" >menu 1</a>  <!--onmouseover เมื่อเลื่อนเมาส์ไปหา-->
+    <a href="" onmouseover="hightlightm(this)" onmouseout="hightlighto(this)" >menu 2</a> <!--onmouseout เลื่อนเมาส์ออก-->
+
+
+
+    <script src="app4.js"></script>
+    </body>
+</html>

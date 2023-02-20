@@ -1,0 +1,12 @@
+.toey{
+    color: blueviolet;
+    background: aquamarine;
+}
+.light{                       /*โหมดสว่าง(ชื่อเฉยๆ)*/
+    color:yellowgreen;
+    background: pink;
+}
+.dark{                                 /*โหมดมืด(ชื่อเฉยๆ)*/
+    color:aquamarine;
+    background: black;
+}

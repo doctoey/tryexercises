@@ -1,0 +1,14 @@
+.darkmode{
+ border:1px solid white;
+ background-color: black;
+ color: white;
+ padding: 30px;
+ margin: 10px;
+}
+.lightmode{
+    border:1px solid azure;
+    background-color: aquamarine;
+    color: violet;
+    padding: 30px;
+    margin: 10px;
+}
