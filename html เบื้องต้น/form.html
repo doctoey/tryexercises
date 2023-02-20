@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <title>ลงทะเบียน</title>
+    </head>
+    <body>
+    <h1 align="center">แบบฟอร์มลงทะเบียน</h1>
+    <form>
+        <!-- input -->
+        <div>
+            <label for="firstname">ชื่อจริง</label>
+            <input type="text" name="fname" placeholder="ป้อนชื่อจริงของคุณ" คำอธิบาย required>
+        </div>
+        <div>
+            <label for="surname">นามสกุล</label>
+            <input type="text"name="lname" placeholder="ป้อนนามสกุลของคุณ"required>
+        </div>
+        <div>
+            <label for="email">eamil</label>
+            <input type="email"name="mail" placeholder="ป้อนmail">
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input type="password"name="password" placeholder="ป้อนpass">
+        </div>
+        <div>
+            <label for="address">ที่อยู่</label>
+            <textarea name="" id="" cols="20" rows="5"></textarea>
+        </div>
+        <div>
+            <label for="age">อายุ</label>
+            <input type="number"name="age" placeholder="ป้อนage" min="0" max="80"
+                                 value="15" readonly>
+        </div>
+        <div>
+            <label for="date">date</label>
+            <input type="date"name="bdate" placeholder="วันเกิด">
+        </div>
+        <div>
+            <label for="tel">tel</label>
+            <input type="tel"name="tel" placeholder="tel">
+        </div>
+        <div>
+            <label for="color">สี</label>
+            <input type="color"name="color" placeholder="สี">
+        </div>
+        <div>
+            <label for="rangenumber">ช่วงตัวเลข</label>
+            <input type="range"name="rangenumber" value="5">   
+            <!-- 0-100 -->
+        </div>
+        <!-- ตัวเลือก dropdown -->
+        <div>
+            <label for="ระดับการศึกษา">ระดับการศึกษา</label>
+            <select name="edu" id="">
+                <option value="ป1">ป1</option>
+                <option value="ป2">ป2</option>
+                <option value="ป3">ป3</option>
+                <option value="ป4">ป4</option>
+                <option value="ป5" selected >ป5</option>
+                 <!-- ใส่ selected ลงไปทำให้ default เลือก ป5 -->
+            </select>
+        </div>
+        <div>
+            <label for="gender">เพศ</label>
+            <input type="radio"name="gender" >ชาย
+            <input type="radio"name="gender" >หญิง
+            <!-- ต้องตั้งชื่อให้เหมือนกัน มันคือการจัดกลุ่ม -->
+            <!-- เป็นจุดๆให้เลือก -->
+        </div>
+        <div>
+            <label for="fav">สิ่งที่ชอบ</label>
+            <input type="checkbox" name="fav">เขียนเว็บ
+            <input type="checkbox" name="fav">นอน
+            <input type="checkbox" name="fav">กิน
+            <input type="checkbox" name="fav">ดูหนัง
+            <input type="checkbox" name="fav">อ่านนิยาย
+        </div>
+        <div>
+            <label for="img">แนบเอกสาร</label>
+            <input type="file"name="file" placeholder="สี">
+        </div>
+        <div>
+            <label for="url">แนบurl</label>
+            <input type="url"name="file" placeholder="url">
+        </div>
+        <!-- ปุ่ม send submit -->
+        <div>
+            <label for="img">ส่งข้อมูล</label>
+            <input type="submit"name="บันทึกข้อมูล" value="ส่งข้อมูล">
+        </div>
+
+        <div>
+            <label for="img">ล้างข้อมูล</label>
+            <input type="reset"name="ล้างข้อมูล" value="ล้างข้อมูล">
+        </div>
+<!-- ล้างข้อมูล ต้องระบุภายใน form ไม่งั้นจะไม่ล้างข้อมูล form นั้นให้ -->
+        <!-- เช็คอย่างไรว่าป้อนข้อมูลถูกมั้ย หรือ ห้ามเว้นว่าง ให้ใส่ required-->
+        <!-- ระบุค่าให้อ่านได้อย่างเดียว ไม่ให้มีการเปลี่ยนค่า readonly -->
+        <!-- การกดบันทึกข้อมูล ใช้ button แทนได้ เช้น button type='submit' -->
+<div>
+    <label for="img">ล้างข้อมูล</label>
+    <button type="submit"></button>
+</div>
+        <button type="submit">ff</button>
+    </form>
+    </body>
+</html>
