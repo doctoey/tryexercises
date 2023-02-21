@@ -45,3 +45,22 @@ function costOfMonitors(rows, columns) {
 
 const totalCost = costOfMonitors(5,4)
 console.log(totalCost)     //return 4000  5*4*200 ด้านบน
+
+
+//Function Expressions
+const plantNeedsWater = function(day) {
+  if(day === 'Wednesday'){
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(plantNeedsWater('Tuesday'))
+
+//----------------------------
+let x = function (num) { return num * num };
+console.log(x(4));
+// can be used as variable value for other variables
+let y = x(3);
+console.log(y);
