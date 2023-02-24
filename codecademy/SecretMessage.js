@@ -20,3 +20,4 @@ secretMessage.splice(6,5,'know,') //array.splice(indexToStart, numberOfIndices, 
 console.log(`after delete 5 ตัว and add  : ${secretMessage}`)
 
 console.log(secretMessage.join(' ')) //รวมสตริงเข้าด้วยกัน แต่ถ้าใส่แค่ '' จะติดกัน เลยใส่ ' ' ลงไปด้วย สเปซบาร์ทีนึง
+//Programming is not about what you know, it is about what you can figure out. -2015, Chris Pine, Learn to Program
