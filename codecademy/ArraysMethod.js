@@ -37,3 +37,17 @@ console.log(groceryList); //[ 'bananas', 'coffee beans', 'brown rice' ]
 const pastaIndex = groceryList.indexOf('pasta');
 
 console.log(pastaIndex);
+
+//splice(ตำแหน่งที่จะลบ , จำนวนที่จะลบ ,(option ใส่ก็ได้ไม่ใส่ก็ได้) สมาชิกที่ต้องการแทรกเข้าไปในตำแหน่งที่ลบ) 
+
+const spdata = [10,20,30,40,50]
+spdata.splice([1],3)     //เลข index
+console.log(spdata);    // จะเหลือแค่ [ 10, 50 ]
+
+const spdata2 = [10,20,30,40,50]
+spdata2.splice([1],1)
+console.log(spdata2);   // [ 10, 30, 40, 50 ] ลบแค่ตำแหน่งตัว 20 1 ตัว
+
+const spdata3 = [10,20,30,40,50]
+spdata3.splice([1],3,999)
+console.log(spdata3);   //[ 10, 999, 50 ]   add 999 เข้าไปก็ได้ด้วย
