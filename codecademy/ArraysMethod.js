@@ -51,3 +51,23 @@ console.log(spdata2);   // [ 10, 30, 40, 50 ] ลบแค่ตำแหน่�
 const spdata3 = [10,20,30,40,50]
 spdata3.splice([1],3,999)
 console.log(spdata3);   //[ 10, 999, 50 ]   add 999 เข้าไปก็ได้ด้วย
+
+
+//Arrays and Functions
+
+const concept = ["arrays", "can", "be", "mutated"];
+
+function changeArr(arr) {
+  arr[3] = "MUTATED";
+}
+changeArr(concept);
+console.log(concept); //[ 'arrays', 'can', 'be', 'MUTATED' ]
+
+function removeElement(newArr) {
+  newArr.pop();   //ลบตัวสุดท้ายตัวนึง [ 'arrays', 'can', 'be']
+}
+removeElement(concept); //call function ลบตัวสุดท้ายตัวนึง 
+console.log(concept); //[ 'arrays', 'can', 'be' ]
+
+console.log(removeElement(concept));//call function เลยลบตัวสุดท้ายอีกตัวนึง 
+console.log(concept);
