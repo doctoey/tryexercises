@@ -71,3 +71,10 @@ console.log(concept); //[ 'arrays', 'can', 'be' ]
 
 console.log(removeElement(concept));//call function เลยลบตัวสุดท้ายอีกตัวนึง 
 console.log(concept);
+
+
+//Nested Arrays
+const numberClusters = [[1,2],[3,4],[5,6]]
+const target = numberClusters[2][1];  //array นับ index 0 1 2 ใช่ปะ อันแรกคือ index 2 ก็คือ [5,6] ตัวต่อไปคือ 1 ก็คือเลข 6
+
+console.log(target)
