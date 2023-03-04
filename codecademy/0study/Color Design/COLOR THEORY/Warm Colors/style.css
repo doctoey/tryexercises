@@ -1,0 +1,31 @@
+body {
+  background-color: #fdfdfd;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  display: block;
+  height: 18vh;
+  padding: 1vh;
+  font-size: 22px;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+}
+
+.first-color {
+  background-color: hsla(8, 100%, 50%, 1);
+}
+.second-color {
+  background-color: hsla(15, 100%, 50%, 1);
+}
+.third-color {
+  background-color: hsla(30, 100%, 50%, 1);
+}
+.fourth-color {
+  background-color: hsla(45, 100%, 50%, 1);
+}
+.fifth-color {
+  background-color: hsla(60, 100%, 50%, 1);
+}
