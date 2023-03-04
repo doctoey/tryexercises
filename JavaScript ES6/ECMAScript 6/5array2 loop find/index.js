@@ -25,13 +25,15 @@ for(let i = 0 ;i<data.length;i++){   //index = 0 ; index<data.length;index++
 data.forEach(e => {                                
     if (e >= 40)
     console.log("hello");  
-    console.log(`สมาชิกใน Array Data = , ${e}`)      //element คือสมาชิกภายใน array data //หรือจะย่อเป็นตัว e ตัวเดียวก็ได้ /สมาชิกใน Array Data = , 10
-});                                                                                                               // สมาชิกใน Array Data = , 20
-                                                                                                                  //สมาชิกใน Array Data = , 30
-                                                                                                                  //hello
-                                                                                                                  //สมาชิกใน Array Data = , 40    //พอ 40 ปุ้บ จะมี hello มาด้วยข้างบน
-                                                                                                                  //hello
-                                                                                                                  //สมาชิกใน Array Data = , 50
+    console.log(`สมาชิกใน Array Data = , ${e}`)      //element คือสมาชิกภายใน array data //หรือจะย่อเป็นตัว e ตัวเดียวก็ได้ 
+   
+}); //output//สมาชิกใน Array Data = , 10                                                                            
+         // สมาชิกใน Array Data = , 20                                                                                                        
+         //สมาชิกใน Array Data = , 30                                                                                                       
+         //hello                                                                                                         
+         //สมาชิกใน Array Data = , 40    //พอ 40 ปุ้บ จะมี hello มาด้วยข้างบน                                                                                                  
+         //hello
+          //สมาชิกใน Array Data = , 50
 const dataplus = [10,20,30,40,50]
 let sum = 0
 dataplus.forEach(e => {       //จะหาผลรวมแต่ละรอบ 
