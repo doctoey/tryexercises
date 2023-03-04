@@ -48,7 +48,7 @@ const smallNumbers = randomNumbers.filter(num => {
   return num < 250;
 })
 console.log(smallNumbers)
-
+//[ 200, 3.14, 7, 13 ]
 
 const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
 
@@ -60,3 +60,4 @@ const longFavoriteWords = favoriteWords.filter(word => {
 })
 
 console.log(longFavoriteWords)
+//[ 'nostalgia', 'hyperbole', 'esoteric' ]
