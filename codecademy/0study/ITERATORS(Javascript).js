@@ -61,3 +61,35 @@ const longFavoriteWords = favoriteWords.filter(word => {
 
 console.log(longFavoriteWords)
 //[ 'nostalgia', 'hyperbole', 'esoteric' ]
+
+//The .findIndex() Method
+const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+const foundAnimal = animals.findIndex(e => {
+  return e === 'elephant';
+});
+console.log(foundAnimal)
+// 7
+
+const startsWithS = animals.findIndex(animals => {
+  if (animals[0] === 's'){
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log(startsWithS)
+//3
+
+//อันนี่ที่เว็บเฉลย
+// const startsWithS = animals.findIndex(animal => {
+//   return animal[0] === 's' 
+//   ? true 
+//   : false;
+// });
+
+
+
+
+
+
