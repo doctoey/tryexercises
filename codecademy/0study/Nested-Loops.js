@@ -8,7 +8,7 @@ const mutualFollowers = [];
 for (let i = 0; i < bobsFollowers.length; i++) {
   for (let j = 0; j < tinasFollowers.length; j++) {
     if (bobsFollowers[i] === tinasFollowers[j]) {
-      mutualFollowers.push(bobsFollowers[i]);
+      mutualFollowers.push(bobsFollowers[i]);         // tinasFollowers ด้วยก็ได้ คือ ถ้าเจอ ลา , สี จะ push (ใส่เข้าไปใน mutual)  ในที่นี้ push จาก array bobsFollowers
     }
   }
 }
