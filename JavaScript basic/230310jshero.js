@@ -174,3 +174,9 @@ return false
 return true
 }
 }
+/*
+nand(true, true) returns false.
+nand(true, false) returns true.
+nand(false, true) returns true.
+nand(false, false) returns true.
+*/
