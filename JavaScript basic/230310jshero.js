@@ -203,3 +203,29 @@ nor(false, true) returns false.
 nor(true, false) returns false.
 nor(true, true) returns false.
 */
+
+
+/*ex.41
+Write a function xor that takes two Boolean values. If both values are different, the result should be true. If both values are the same, the result should be false.
+
+I.e.: The calls xor(true, false) and xor(false, true) should return true. The calls xor(true, true) and xor(false, false) should return false.
+
+*/
+let xor1 = (x, y) => {
+  let b =  (x != y)
+return b
+} 
+
+let xor2 = (x, y) => {
+if (x != y) {
+return true
+} else {
+return false
+}
+} 
+/*
+xor(true, true) returns false.
+xor(false, false) returns false.
+xor(true, false) returns true.
+xor(false, true) returns true.
+*/
