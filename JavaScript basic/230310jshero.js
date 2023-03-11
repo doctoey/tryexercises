@@ -306,3 +306,71 @@ isEven(2) returns true.
 isEven(37) returns false.
 isEven(208) returns true.
 */
+
+/*
+อธิบาย 
+=
+==
+===
+!=
+!==
+
+= ใช้สำหรับกำหนดค่า ไม่ใช่ตัวดำเนินการเปรียบเทียบ
+== ใช้สำหรับเปรียบเทียบค่าระหว่างสองตัวแปร โดยไม่คำนึงถึงชนิดของข้อมูล (type coercion)
+=== ใช้สำหรับเปรียบเทียบค่าระหว่างสองตัวแปร โดยใช้ชนิดของข้อมูล (type comparison) และค่าต้องเท่ากันทั้งค่าและชนิดของข้อมูล
+!= ใช้สำหรับตรวจสอบว่าค่าสองค่าไม่เท่ากัน โดยไม่คำนึงถึงชนิดของข้อมูล
+!== ใช้สำหรับตรวจสอบว่าค่าสองค่าไม่เท่ากัน โดยใช้ชนิดของข้อมูลและค่าต้องไม่เท่ากันทั้งค่าและชนิดของข้อมูล
+
+ตัวอย่างการใช้งาน
+
+var a = 5;
+var b = "5";
+
+// == ใช้การแปลงชนิดของข้อมูล (type coercion)
+console.log(a == b);   // true
+console.log(a == 5);   // true
+console.log(a == "5"); // true
+
+// === เปรียบเทียบค่าและชนิดของข้อมูล
+console.log(a === b);   // false
+console.log(a === 5);   // true
+console.log(a === "5"); // false
+
+// != ใช้การแปลงชนิดของข้อมูล (type coercion)
+console.log(a != b);   // false
+console.log(a != 6);   // true
+console.log(a != "6"); // true
+
+// !== เปรียบเทียบค่าและชนิดของข้อมูล
+console.log(a !== b);   // true
+console.log(a !== 5);   // false
+console.log(a !== "5"); // true
+
+*/
+
+/*ex.45 Strict inequality
+Write a function unequal that checks 3 values for strict inequality. The function should return true if all three parameters are strict unequal. Otherwise false.
+
+Example: unequal(1, 2, 3) should return true and unequal(1, 1, 2) should return false.
+*/
+
+let unequal = (a, b, c) => {
+  return a !== b && a !== c && b !== c;
+}
+
+let unequal = (a, b, c) => {
+if (a !== b && a !== c && b !== c){
+return true
+} else {
+return false
+}
+}
+
+/*
+unequal(1, 2, 3) returns true.
+unequal(2, 1, 1) returns false.
+unequal(1, 2, 1) returns false.
+unequal(1, 1, 2) returns false.
+unequal('rose', 'Rose', 'ROSE') returns true.
+unequal('1', 1, true) returns true.
+*/
