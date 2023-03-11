@@ -424,3 +424,29 @@ equals(1, '1') returns 'UNEQUAL'.
 equals('JS', 'JS') returns 'EQUAL'.
 equals('left', 'right') returns 'UNEQUAL'.
 */
+
+
+/*ex.48 Two returns
+Write a function repdigit that determines whether a two-digit decimal is a repdigit or not. If the decimal is a repdigit, 'Repdigit!' should be returned, otherwise 'No Repdigit!'.
+
+Example: repdigit(22) should return 'Repdigit!' and repdigit(23) should return 'No Repdigit!'.
+
+*/
+
+function repdigit(num) {
+  if (num < 10 || num > 99) {
+    return 'No Repdigit!';
+  }
+  const digit1 = num % 10;
+  const digit2 = Math.floor(num / 10);
+  return digit1 === digit2 ? 'Repdigit!' : 'No Repdigit!';
+}
+
+/*
+repdigit(11) returns 'Repdigit!'.
+repdigit(55) returns 'Repdigit!'.
+repdigit(99) returns 'Repdigit!'.
+repdigit(10) returns 'No Repdigit!'.
+repdigit(12) returns 'No Repdigit!'.
+repdigit(98) returns 'No Repdigit!'.
+*/
