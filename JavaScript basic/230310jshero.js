@@ -106,3 +106,25 @@ function area(radius) {
   return Math.PI * radius ** 2;
 }
 /*สูตรหาพื้นที่ของวงกลมคือ πr^2  (พายอาร์กำลังสอง) */
+
+
+
+/* ex.36 Rounding
+Write a function round100 that rounds a number to the nearest hundred.
+
+Example: round100(1749) should return 1700 and round100(856.12) should return 900.
+*/
+function round100(num) {
+  return Math.round(num/100)*100;
+}
+/*round100(49.999) returns 0.
+
+round100(50) returns 100.
+
+round100(349) returns 300.
+
+round100(350) returns 400.*/
+/*ฟังก์ชัน round100 ที่ให้มานั้นเป็นฟังก์ชันที่ใช้ในการปัดเลขให้เป็นหลักร้อย (round to nearest hundred) โดยมีจำนวนเต็มตัวเลขเป็นพารามิเตอร์ของฟังก์ชัน
+
+สมการที่ใช้ในการคำนวณคือ Math.round(num/100)*100 ซึ่งจะทำการหารจำนวนที่รับเข้ามาด้วย 100 แล้วใช้ฟังก์ชัน Math.round() 
+เพื่อปัดเศษขึ้นหรือลงให้เป็นจำนวนเต็มที่ใกล้เคียงที่สุดกับตัวเลขที่รับเข้ามา แล้วคูณด้วย 100 เพื่อให้ได้ผลลัพธ์เป็นหลักร้อยที่ใกล้เคียงที่สุดกับตัวเลขที่รับเข้ามา*/
