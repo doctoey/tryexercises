@@ -62,3 +62,46 @@ Example: mean(1, 2) should return 1.5.
 */
 
 let mean = (x, y) => (x+y)/2
+
+
+
+/* ex.33 Math
+Write a function hypotenuse that calculates the length of the hypotenuse of a right triangle. 
+The length of the two legs is passed to the function. 
+Tip: In a right triangle the Pythagorean theorem is valid. 
+If a and b are the lengths of the two legs and c is the length of the hypotenuse, 
+the following is true: a² + b² = c². Since 3² + 4² = 5² applies, hypotenuse(3, 4) should return 5.
+
+*/
+
+function hypotenuse(a, b) {
+  let cSquare = Math.pow(a, 2) + Math.pow(b, 2);
+  return Math.sqrt(cSquare);
+}
+
+/*ฟังก์ชันนี้ใช้สูตรพีธาโกรัส (Pythagoras's theorem)  c^2 = a^2 + b^2
+ฟังก์ชัน hypotenuse จะรับพารามิเตอร์ a และ b เพื่อคำนวณหาความยาวของ (c) โดยกำหนดค่า c^2 ด้วยค่า a^2 บวก b^2 แล้วใช้ Math.sqrt() เพื่อหาค่ารากที่สองของ c^2 
+*/
+
+
+/*ex. 34 min and max 
+Write a function midrange, that calculates the midrange of 3 numbers. The midrange is the mean of the smallest and largest number.
+
+Example: midrange(3, 9, 1) should return (9+1)/2 = 5.
+*/
+function midrange(a, b, c) {
+  let min = Math.min(a, b, c);
+  let max = Math.max(a, b, c);
+  return (min + max) / 2;
+}
+
+
+/*ex.35 Math.PI 
+Write a function area that calculates the area of a circle. The function is given the radius of the circle.
+
+Example: area(1) should return π and area(2) should return 4 * π.
+*/
+
+function area(radius) {
+  return Math.PI * radius ** 2;
+}
