@@ -358,7 +358,7 @@ let unequal = (a, b, c) => {
   return a !== b && a !== c && b !== c;
 }
 
-let unequal = (a, b, c) => {
+let unequa2 = (a, b, c) => {
 if (a !== b && a !== c && b !== c){
 return true
 } else {
@@ -373,4 +373,23 @@ unequal(1, 2, 1) returns false.
 unequal(1, 1, 2) returns false.
 unequal('rose', 'Rose', 'ROSE') returns true.
 unequal('1', 1, true) returns true.
+*/
+
+
+/*ex.46 Compare numbers
+Write a function isThreeDigit that checks if a number is greater than or equal to 100 and less than 1000.
+
+Example: isThreeDigit(500) should return true and isThreeDigit(50) should return false.
+
+*/
+
+let isThreeDigit = (x) => {
+return x >= 100 && x < 1000;
+}
+
+/*
+isThreeDigit(100) returns true.
+isThreeDigit(999) returns true.
+isThreeDigit(99) returns false.
+isThreeDigit(1000) returns false.
 */
