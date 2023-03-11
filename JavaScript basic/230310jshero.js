@@ -142,3 +142,35 @@ let dice = () => {
 โดยฟังก์ชัน Math.random() จะสุ่มเลขตั้งแต่ 0 ถึงน้อยกว่า 1 ซึ่งเราจะนำมาคูณด้วย 6 เพื่อให้ได้เลขตั้งแต่ 0 ถึงน้อยกว่า 6
 จากนั้นเราจะใช้ Math.floor() เพื่อปัดเลขที่ได้ลงเป็นจำนวนเต็ม ซึ่งจะเป็นค่าที่อยู่ระหว่าง 0 ถึง 5 ซึ่งเป็นเลขที่เราต้องการ จากนั้นเราจะบวกด้วย 1 เพื่อให้ได้เลขตั้งแต่ 1 ถึง 6 ตามที่เราต้องการ
 */
+
+
+/*ex.38 
+Write a function add that takes a string with a summation task and returns its result as a number. 
+Two natural numbers should be added. The summation task is a string of the form '102+17'.
+
+Example: add('102+17') should return 119.*/
+
+function add(x) {
+  const [num1, num2] = x.split('+').map(Number);
+  return num1 + num2;
+}
+
+add('112+112')   //224
+
+
+/*ex.39 Boolean
+Write a function nand that takes two Boolean values. If both values are true, 
+the result should be false. In the other cases the return should be true.
+
+I.e.: The call nand(true, true) should return false. 
+The calls nand(true, false), nand(false, true) and nand(false, false) should return true.
+
+*/
+
+let nand = (x, y) => {
+if (x === true && y === true) {
+return false
+} else {
+return true
+}
+}
