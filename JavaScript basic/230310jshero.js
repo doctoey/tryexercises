@@ -393,3 +393,34 @@ isThreeDigit(999) returns true.
 isThreeDigit(99) returns false.
 isThreeDigit(1000) returns false.
 */
+
+/*ex.47 if
+Write a function equals that checks two values for strict equality. If the two values are equal, the string 'EQUAL' should be returned. If they are unequal, you should get 'UNEQUAL'.
+
+Example: equals(1, 1) should return 'EQUAL' and equals(1, 2) should return 'UNEQUAL'.
+
+*/
+
+let equals5 = (x, y) => {
+  let result = 'UNEQUAL';
+  if (x === y) {
+    result = 'EQUAL';
+  }
+  return result;
+}
+
+let equals6 = (x, y) => {
+if (x === y) {
+return 'EQUAL'
+} else {
+return 'UNEQUAL'
+}
+}
+
+/*
+equals(1, 1) returns 'EQUAL'.
+equals(1, 2) returns 'UNEQUAL'.
+equals(1, '1') returns 'UNEQUAL'.
+equals('JS', 'JS') returns 'EQUAL'.
+equals('left', 'right') returns 'UNEQUAL'.
+*/
