@@ -259,3 +259,50 @@ equals(1, 2) returns false.
 equals('sun', 'sun') returns true.
 equals('left', 'right') returns false.
 */
+
+
+/*ex.43 Three identical values
+Write a function equals that checks 3 values for strict equality. The function should only return true if all 3 values are equal.
+
+Example: equals(1, 1, 1) should return true and equals(1, 2, 1) should return false.
+
+*/
+
+let equals3 = (a, b, c) => {
+  return a === b && a === c;
+}
+
+let equals4 = (a, b, c) => {
+if (a === b && a === c){
+return true
+} else {
+return false
+}
+}
+
+/*
+equals(1, 1, 1) returns true.
+equals('1', 1, 1) returns false.
+equals(1, '1', 1) returns false.
+equals(1, 1, '1') returns false.
+equals('A', 'B', 'C') returns false.
+*/
+
+
+/*ex.44 Even numbers เลขคู่วววว
+Write a function isEven that checks if a passed number is even. If the given number is even, true should be returned, otherwise false.
+
+Example: isEven(2) should return true and isEven(3) should return false.
+*/
+
+let isEven = (num) => {
+  return num % 2 === 0;
+}
+
+/*
+isEven(0) returns true.
+isEven(1) returns false.
+isEven(2) returns true.
+isEven(37) returns false.
+isEven(208) returns true.
+*/
