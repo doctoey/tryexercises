@@ -105,3 +105,4 @@ Example: area(1) should return π and area(2) should return 4 * π.
 function area(radius) {
   return Math.PI * radius ** 2;
 }
+/*สูตรหาพื้นที่ของวงกลมคือ πr^2  (พายอาร์กำลังสอง) */
