@@ -180,3 +180,26 @@ nand(true, false) returns true.
 nand(false, true) returns true.
 nand(false, false) returns true.
 */
+
+
+/*ex.40 Write a function nor that takes two Boolean values. If both values are false, the result should be true. In the other cases the return should be false.
+
+I.e.: The call nor(false, false) should return true. The calls nor(true, false), nor(false, true) and nor(true, true) should return false.
+
+*/
+
+//สลับกับข้อข้างบนแหละ โกงเอา
+let nor = (x, y) => {
+if (x === false && y === false) {
+return true
+} else {
+return false
+}
+}
+
+/*
+nor(false, false) returns true.
+nor(false, true) returns false.
+nor(true, false) returns false.
+nor(true, true) returns false.
+*/
