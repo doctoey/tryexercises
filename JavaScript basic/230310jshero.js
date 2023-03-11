@@ -182,7 +182,8 @@ nand(false, false) returns true.
 */
 
 
-/*ex.40 Write a function nor that takes two Boolean values. If both values are false, the result should be true. In the other cases the return should be false.
+/*ex.40 NOR
+Write a function nor that takes two Boolean values. If both values are false, the result should be true. In the other cases the return should be false.
 
 I.e.: The call nor(false, false) should return true. The calls nor(true, false), nor(false, true) and nor(true, true) should return false.
 
@@ -205,10 +206,12 @@ nor(true, true) returns false.
 */
 
 
-/*ex.41
-Write a function xor that takes two Boolean values. If both values are different, the result should be true. If both values are the same, the result should be false.
+/*ex.41 XOR
+Write a function xor that takes two Boolean values. If both values are different, the result should be true. 
+If both values are the same, the result should be false.
 
-I.e.: The calls xor(true, false) and xor(false, true) should return true. The calls xor(true, true) and xor(false, false) should return false.
+I.e.: The calls xor(true, false) and xor(false, true) should return true. 
+The calls xor(true, true) and xor(false, false) should return false.
 
 */
 let xor1 = (x, y) => {
@@ -228,4 +231,31 @@ xor(true, true) returns false.
 xor(false, false) returns false.
 xor(true, false) returns true.
 xor(false, true) returns true.
+*/
+
+/*ex.42 Strict equality
+Write a function equals that checks two values for strict equality.
+
+Example: equals(1, 1) should return true and equals(1, 2) should return false.
+
+*/
+
+let equals1 = (a, b) => {
+  return a === b;
+}
+
+let equals2 = (a, b) => {
+if (a === b){
+return true
+} else {
+return false
+}
+}
+
+/*
+equals(1, 1) returns true.
+equals(1, '1') returns false.
+equals(1, 2) returns false.
+equals('sun', 'sun') returns true.
+equals('left', 'right') returns false.
 */
