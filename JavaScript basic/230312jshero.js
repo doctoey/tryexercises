@@ -98,3 +98,20 @@ addWithSurcharge(21, 21) returns 48.
 } else {
   //  block of code to be executed if the condition1 is false and condition2 is false
 }*/
+
+
+/*ex.51 Arrays
+Write a function toArray that takes 2 values and returns these values in an array.
+
+Example: toArray(5, 9) should return the array [5, 9].
+
+*/
+
+let toArray = (x, y) => {
+return [x, y]
+}
+
+/*
+toArray(1, 2) returns [ 1, 2 ].
+toArray('Tom', 'Huck') returns [ 'Tom', 'Huck' ].
+*/
