@@ -115,3 +115,19 @@ return [x, y]
 toArray(1, 2) returns [ 1, 2 ].
 toArray('Tom', 'Huck') returns [ 'Tom', 'Huck' ].
 */
+
+/*ex.52 Get array elements
+Write a function getFirstElement that takes an array and returns the first element of the array.
+
+Example: getFirstElement([1, 2]) should return 1.
+
+*/
+
+let getFirstElement = (first) => {
+return first[0]
+}
+
+/*
+getFirstElement([1, 2]) returns 1.
+getFirstElement(['Firefox', 'Chrome']) returns 'Firefox'.
+*/
