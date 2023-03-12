@@ -91,3 +91,10 @@ addWithSurcharge(21, 20) returns 46.
 addWithSurcharge(20, 21) returns 46.
 addWithSurcharge(21, 21) returns 48.
 */
+/*if (condition1) {
+  //  block of code to be executed if condition1 is true
+} else if (condition2) {
+  //  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  //  block of code to be executed if the condition1 is false and condition2 is false
+}*/
