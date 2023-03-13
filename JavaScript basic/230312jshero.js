@@ -167,3 +167,25 @@ sort([2, 1, 3]) returns [ 1, 2, 3 ].
 sort([2, 3, 1]) returns [ 1, 2, 3 ].
 sort([3, 1, 2]) returns [ 1, 2, 3 ].
 sort([3, 2, 1]) returns [ 1, 2, 3 ].*/
+
+
+
+/*ex.56 Array: shift() and push()
+Write a function rotate that rotates the elements of an array. All elements should be moved one position to the left. The 0th element should be placed at the end of the array. The rotated array should be returned.
+
+Example: rotate(['a', 'b', 'c']) should return ['b', 'c', 'a'].
+*/
+
+let rotate = (array) => {    //สมมุติ ['a','b','c']
+  let first = array.shift();     //เหลือ ['b','c'] 
+  //ต้องการ ['b','c','a'] ตอนนี้ a อยู่ใน first ก็ push ก็เข้า
+  array.push(first);  //เอา 'a' กลับเข้าไปด้วย push , push จะต่อหลัง
+  return array;
+  
+}
+
+/*
+rotate([1, 2]) returns [ 2, 1 ].
+rotate(['a', 'b', 'c']) returns [ 'b', 'c', 'a' ].
+rotate([1, 'b', 'c', 37]) returns [ 'b', 'c', 37, 1 ]
+*/
