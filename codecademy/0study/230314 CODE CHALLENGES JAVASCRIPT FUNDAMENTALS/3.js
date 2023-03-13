@@ -1,15 +1,15 @@
 // Write your function here:
 let lifePhase = (age) => {
     switch (true) {
-      case (age >= 0 && age <= 3):
+      case (age >= 0 && age <= 3) :
         return 'baby';
-      case (age >= 4 && age <= 12):
+      case (age >= 4 && age <= 12) :
         return 'child';
-      case (age >= 13 && age <= 19):
+      case (age >= 13 && age <= 19) :
         return 'teen';
-      case (age >= 20 && age <= 64):
+      case (age >= 20 && age <= 64) :
         return 'adult';
-      case (age >= 65 && age <= 140):
+      case (age >= 65 && age <= 140) :
         return 'senior citizen';
       default:
         return 'This is not a valid age';
