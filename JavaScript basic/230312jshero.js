@@ -209,3 +209,31 @@ add(['J'], 'J') returns [ 'J' ].
 add([1, 2], 3) returns [ 1, 2, 3 ].
 add([1, 2], 2) returns [ 1, 2 ]
 */
+
+/*ex.58 Array: concat()
+Write a function concatUp that concatenate two arrays. The longer array should be appended to the shorter array. 
+If both arrays are equally long, the second array should be appended to the first array.
+
+Example: concatUp([1, 2], [3]) should return [3, 1, 2] and concatUp([5, 7], [6, 8]) should return [5, 7, 6, 8].
+
+*/ 
+function concatUp(firstArray, secondArray) {
+
+  if (secondArray.length >= firstArray.length) {
+    return firstArray.concat(secondArray);
+  } else {
+  return secondArray.concat(firstArray);
+}
+}
+
+/*
+ถ้า array2 ยาว >= array 1 return array แรกตามด้วย array ที่สอง 
+
+แต่ถ้า array1 ยาว >= array 2 จะ return array ที่สองตามด้วย array แรก
+*/
+
+/** 
+concatUp([5, 7], [6]) returns [ 6, 5, 7 ].
+concatUp(['x'], ['a', 'b']) returns [ 'x', 'a', 'b' ].
+concatUp([5, 7], [6, 8]) returns [ 5, 7, 6, 8 ].
+ */
