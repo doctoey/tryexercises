@@ -148,3 +148,22 @@ let getLastElement = (array) => {
 getLastElement([1, 2]) returns 2
 getLastElement(['a', 'b', 'c']) returns 'c'
 */
+
+
+/*ex.55 Sorting arrays
+Write a function sort that takes an array filled with 3 numbers and returns these 3 numbers sorted in ascending order as an array.
+
+Example: sort([2, 3, 1]) should return [1, 2, 3].
+
+*/
+let sort = (array) => {
+  let sortindex = array.sort() ;
+  return sortindex
+}
+
+/*sort([1, 2, 3]) returns [ 1, 2, 3 ].
+sort([1, 3, 2]) returns [ 1, 2, 3 ].
+sort([2, 1, 3]) returns [ 1, 2, 3 ].
+sort([2, 3, 1]) returns [ 1, 2, 3 ].
+sort([3, 1, 2]) returns [ 1, 2, 3 ].
+sort([3, 2, 1]) returns [ 1, 2, 3 ].*/
