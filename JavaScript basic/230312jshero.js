@@ -189,3 +189,23 @@ rotate([1, 2]) returns [ 2, 1 ].
 rotate(['a', 'b', 'c']) returns [ 'b', 'c', 'a' ].
 rotate([1, 'b', 'c', 37]) returns [ 'b', 'c', 37, 1 ]
 */
+
+/**ex.57 
+ Write a function add that adds an element to the end of an array. However, the element should only be added if it is not already in the array.
+
+Example: add([1, 2], 3) should return [1, 2, 3] and add([1, 2], 2) should return [1, 2].
+ */
+
+function add(arr, element) { // รับ arguments คือ arr และ element
+  if (arr.indexOf(element) === -1) { // ใช้ method indexOf() ในการตรวจสอบว่า element มีอยู่ใน arr หรือไม่
+    arr.push(element); // ถ้าไม่มีให้เพิ่ม element เข้าไปในตำแหน่งสุดท้ายของ arr ด้วย method push()
+  }
+  return arr; // คืนค่า Array ที่อัพเดทแล้ว ไม่ว่าจะเพิ่มหรือไม่ก็ตาม
+}
+
+/*
+add(['J'], 'S') returns [ 'J', 'S' ].
+add(['J'], 'J') returns [ 'J' ].
+add([1, 2], 3) returns [ 1, 2, 3 ].
+add([1, 2], 2) returns [ 1, 2 ]
+*/
