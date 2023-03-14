@@ -19,7 +19,7 @@ let canIVote = (age) => {
   console.log(canIVote(17)) //false
 
 
-  
+
 //2
 //agreeOrDisagree()  
   // Write your function here:
@@ -133,7 +133,7 @@ let average = (grade1 + grade2 + grade3) / 3;
 // Uncomment the line below when you're ready to try out your function
 // console.log(finalGrade(99, 92, 95)) // Should print 'A'
 console.log(finalGrade(99, 92, 95))
-console.log(finalGrade(70, 62, 95))
+console.log(finalGrade(70, 62, 41))
 console.log(finalGrade(80, 72, 83))
 // We encourage you to add more function calls of your own to test your code!
 
