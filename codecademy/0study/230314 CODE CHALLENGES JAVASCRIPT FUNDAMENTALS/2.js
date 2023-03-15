@@ -25,3 +25,9 @@ console.log(Math.ceil(7.004));
 // Expected output: 8
 console.log(Math.ceil(-7.004));
 // Expected output: -7
+
+//sillySentence()
+let sillySentence = (x, y, z) => {
+return `I am so ${x} because I ${y} coding! Time to write some more awesome ${z}!`
+}
+console.log(sillySentence('excited', 'love', 'functions'))  //I am so excited because I love coding! Time to write some more awesome functions!
