@@ -6,5 +6,5 @@ let truthyOrFalsy = (value) =>{
    return false
  
 }
-truthyOrFalsy(0)
-console.log(truthyOrFalsy())
+truthyOrFalsy(0) //true
+console.log(truthyOrFalsy()) //false
