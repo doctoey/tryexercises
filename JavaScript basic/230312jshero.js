@@ -244,6 +244,29 @@ concatUp([5, 7], [6, 8]) returns [ 5, 7, 6, 8 ].
 /*
 59-64 ข้าม
 */
+
+/*
+ex.63 undefined
+Write a function hello having one parameter and returning 'Hello <parameter>!'. If hello is called without an argument, 'Hello world!' should be returned.
+
+Example: hello('Nala') should return 'Hello Nala!'.
+*/
+function hello(name) {
+  name = name || 'world';
+  return `Hello ${name}!`;
+}
+
+/*
+function hello(name = 'world') {
+  return `Hello ${name}!`;
+}
+*/
+// hello('Nala') returns 'Hello Nala!'.
+// hello('Badu') returns 'Hello Badu!'.
+// hello() returns 'Hello world!'.
+
+
+/*
 ex. 65. for loop
 Write a function addTo that accepts a number as a parameter and adds all natural numbers smaller or equal than the parameter. The result is to be returned.
 
