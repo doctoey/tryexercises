@@ -264,3 +264,27 @@ return number
 // addTo(2) returns 3.
 // addTo(3) returns 6.
 // addTo(9) returns 45.
+
+/*
+ex.66 Factorial
+Write a function factorial that calculates the factorial of a positive integer.
+
+Example: factorial(3) should return 6.
+
+ For example, 3! = 1*2*3 = 6. By definition, 0! = 1.
+*/
+
+let factorial = (n) => {
+let num = 1
+for (let i=1 ; i <=n ; i++){
+num = num * i
+}
+return num
+}
+
+// factorial(0) returns 1.
+// factorial(1) returns 1.
+// factorial(2) returns 2.
+// factorial(3) returns 6.
+// factorial(4) returns 24.
+// factorial(9) returns 362880.
