@@ -134,7 +134,7 @@ getFirstElement(['Firefox', 'Chrome']) returns 'Firefox'.
 
 //ขาด 53 ยังไม่เข้าใจ
 
-/*ex.54
+/*ex.54 Array: length
 Write a function getLastElement that takes an array and returns the last element of the array.
 
 Example: getLastElement([1, 2]) should return 2.*/
@@ -190,7 +190,7 @@ rotate(['a', 'b', 'c']) returns [ 'b', 'c', 'a' ].
 rotate([1, 'b', 'c', 37]) returns [ 'b', 'c', 37, 1 ]
 */
 
-/**ex.57 
+/**ex.57 Array: indexOf()
  Write a function add that adds an element to the end of an array. However, the element should only be added if it is not already in the array.
 
 Example: add([1, 2], 3) should return [1, 2, 3] and add([1, 2], 2) should return [1, 2].
@@ -237,3 +237,30 @@ concatUp([5, 7], [6]) returns [ 6, 5, 7 ].
 concatUp(['x'], ['a', 'b']) returns [ 'x', 'a', 'b' ].
 concatUp([5, 7], [6, 8]) returns [ 5, 7, 6, 8 ].
  */
+
+
+/*
+
+/*
+59-64 ข้าม
+*/
+ex. 65. for loop
+Write a function addTo that accepts a number as a parameter and adds all natural numbers smaller or equal than the parameter. The result is to be returned.
+
+Example: addTo(3) should return 1+2+3 = 6.
+
+*/
+
+let addTo = (num) => {
+let number = 0
+for ( let i=0 ; i<=num ; i++){
+number += i
+}
+return number
+}
+
+// addTo(0) returns 0.
+// addTo(1) returns 1.
+// addTo(2) returns 3.
+// addTo(3) returns 6.
+// addTo(9) returns 45.
