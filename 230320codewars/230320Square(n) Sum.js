@@ -22,3 +22,22 @@ function squareSum(numbers){
  })
   return result
 }
+
+
+function squareSum2(numbers){
+ let result = 0
+ numbers.forEach(ele => {
+   let temp = 0
+   temp = ele * ele
+   result += temp
+ })
+  return result
+}
+
+//ดึงของออกจาก arr => forEach, for loops
+//ยกกำลัง 2
+//บวกกัน
+
+//reduce
+//forEach
+//for loop
