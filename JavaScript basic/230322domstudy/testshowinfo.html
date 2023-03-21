@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        body {
+            background-color: black
+        }
+        div {
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <p class="info"></p>
+    </div>
+
+
+    <script>
+
+        let div = document.querySelector('div');
+        let WIDTH = window.innerWidth;
+        let HEIGHT = window.innerHeight;
+        
+        let info = document.querySelector('.info')
+
+        div.style.width = WIDTH + 'px';
+        div.style.height = HEIGHT + 'px';
+
+        window.onresize = function() {
+            WIDTH = window.innerWidth;
+            HEIGHT = window.innerHeight;
+
+            div.style.width = WIDTH + 'px';
+            div.style.height = HEIGHT + 'px';
+
+            info.style.color = 'white';
+            info.innerHTML = WIDTH + 'px' + '  ' + HEIGHT + 'px';
+        }
+
+    </script>
+</body>
+</html>
