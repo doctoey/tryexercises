@@ -51,34 +51,34 @@
 
     </ul>
 
-    
+
     </section>
 
     <script>
 
-        let list = document.querySelector('ul');
-        let input = document.querySelector('input');
-        let button = document.querySelector('button');
+        let list = document.querySelector('ul'); //เอา ul มาเก็บไว้ในตัวแปร
+        let input = document.querySelector('input'); //เอา input มาเก็บไว้ในตัวแปร
+        let button = document.querySelector('button'); //เอา button มาเก็บไว้ในตัวแปร
 
-        button.onclick = function() {
-            let myItem = input.value;
-            input.value = '';
+        button.onclick = function() { //event onclick คือคลิกแล้วเรียกใช้ฟังก์ชั่น
+            let myItem = input.value; //. value เป็นข้อความ หรือค่าที่จะใส่ลงไป
+            input.value = ''; //ใส่ค่าเป็นค่าเปล่าๆไว้ก่อน ไม่ต้องมีอะไร
 
-            let listItem = document.createElement('li');
-            let listText = document.createElement('span');
-            let listBtn = document.createElement('button');
+            let listItem = document.createElement('li'); //สร้าง li
+            let listText = document.createElement('span'); //สร้าง span
+            let listBtn = document.createElement('button'); //ปุ่ม
 
             listItem.appendChild(listText); //ให้ listText ไปปรากฏที่ listItem (แท็ก li)
-            listText.textContent = myItem;
+            listText.textContent = myItem; //เอาตัวแปร myitem มา เพราะ myitem รับ input.value มา  , textcontent คือการเปลี่ยนแปลงข้อความ
             listText.appendChild(listBtn); //เอาปุ่มให้ปรากฏที่ listItem เหมือนกัน
-            listBtn.textContent = 'Delete';
-            list.appendChild(listItem);
+            listBtn.textContent = 'Delete'; // ให้ข้อความที่ปุ้มขึ้นว่า delete
+            list.appendChild(listItem); // เอา listitem (ที่เก็บแท็ก li ไว้) ให้ไปแสดงที่แท็ก ul มันใช้คู่กัน
 
-            listBtn.onclick = function(e) {
-                list.removeChild(listItem);
+            listBtn.onclick = function(e) { //เวลาคลิกปุ่ม
+                list.removeChild(listItem); //ให้ลบ สistitem ทิ้งปายยยย
             }
 
-            input.focus();
+            input.focus(); //ลบเสร็จ ให้ input กลับมา focus คือให้ curser มาแสดงที่ช่อง input
         }
 
     </script>
