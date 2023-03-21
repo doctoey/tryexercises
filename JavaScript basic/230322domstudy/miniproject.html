@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .shopping-box{
+            width: 350px;
+            background-color:#24292e;
+            padding: 2em;
+            margin: 2em auto;
+        }
+
+        h1 {
+            color: whitesmoke;
+            margin-bottom: 1em;
+        }
+
+        .shopping-form {
+            color:whitesmoke;
+        }
+        input, button {
+            border: none;
+            padding:.5em 1em;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            color: whitesmoke;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="shopping-box">
+        <h1>My Shopping List</h1>
+
+    <div class="shopping-form">
+        <label for="item">Enter a new item</label>
+        <input type="text" name="item" id="item">
+        <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    
+    </section>
+
+    <script>
+
+        let list = document.querySelector('ul');
+        let input = document.querySelector('input');
+        let button = document.querySelector('button');
+
+        button.onclick = function() {
+            let myItem = input.value;
+            input.value = '';
+
+            let listItem = document.createElement('li');
+            let listText = document.createElement('span');
+            let listBtn = document.createElement('button');
+
+            listItem.appendChild(listText); //ให้ listText ไปปรากฏที่ listItem (แท็ก li)
+            listText.textContent = myItem;
+            listText.appendChild(listBtn); //เอาปุ่มให้ปรากฏที่ listItem เหมือนกัน
+            listBtn.textContent = 'Delete';
+            list.appendChild(listItem);
+
+            listBtn.onclick = function(e) {
+                list.removeChild(listItem);
+            }
+
+            input.focus();
+        }
+
+    </script>
+</body>
+</html>
