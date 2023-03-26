@@ -62,6 +62,41 @@ console.log(powArr555(arr)); // Output: [4, 9, 16, 64, 144]
 
 
 //3
+//อายุไม่น้อยกว่า 20
+const array456 = [
+  { name: 'Benji', age: 30 },
+  { name: 'Nas', age: 20 },
+  { name: 'Sayo', age: 22 },
+  { name: 'Sapari', age: 16 },
+  { name: 'Storm', age: 27 }
+];
+
+// [ { name: 'Benji', age: 30 },{ name: 'Sayo', age: 22 },{ name: 'Storm', age: 27 } ]
+
+let more20 = array456.filter(e => {
+  return e.age > 20
+})
+console.log(more20)
+
+//ของพี่ปัน
+// const newArr = []
+// arr.foreach(element => {
+//     if (element.age > 20) {
+//         newArr.push(element)
+//     }
+// });
+
+
+// function filter (arr) {
+//     const newArr = []
+//     arr.foreach(element => {
+//         if (element.age > 20) {
+//             newArr.push(element)
+//         }
+//     });
+//     return newArr
+// }
+
 //4
 //5
 
