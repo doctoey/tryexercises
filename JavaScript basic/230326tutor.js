@@ -166,7 +166,7 @@ const arrha = [2,3,4];
     
 //     console.log(result487)
 /////////////////////////////////////////
-// const korhok1 = arr => arr.reduce((accu,curr)=> accu + curr ** 2),0
+// const korhok1 = arr => arr.reduce(((accu,curr)=> accu + curr ** 2),0)
 const korhok = arr => arr.reduce((accu,curr)=> accu + Math.pow(curr, 2),0)
 
 korhok([2,4,3]) //29
@@ -200,7 +200,69 @@ const sports = ['boxing', 'football', 'swimming', 'biking'];
 
 sports.splice(3,0,'kendo', 'judo', 'basketball')
 console.log(sports) //[ 'boxing', 'football', 'swimming', 'kendo', 'judo', 'basketball', 'biking' ]
+
 //7
+
+//เขียน function deleteTodo(n) ให้ n เท่ากับ id ที่จะลบใน array
+let todos = [
+  { id: 1, title: 'reading' , completed: false},
+  { id: 2, title: 'workout' , completed: true},
+  { id: 3, title: 'cooking' , completed: true},
+  { id: 4, title: 'coding' , completed: false},
+]
+
+// output
+// deleteTodo(2)
+// [
+//   { id: 1, title: 'reading' , completed: false},
+//   { id: 3, title: 'cooking' , completed: true},
+//   { id: 4, title: 'coding' , completed: false},
+// ]
+
+//hint1
+//findIndex
+//splice it out 1 item
+
+////////ทำเอง ผิด
+// let deleteTodo = (n) => {
+//   let index = todos.findIndex(e => e.id = n)
+//   todo.splice(index,1)
+//   );
+//   return todos
+// }
+
+// console.log(deleteTodo(2))
+
+//////////////////////////////////////////////
+
+function deleteTodoB(n) {
+  let temp = [...todos]
+  temp = temp.filter(todo => todo.id !== n);
+  return temp;
+}
+deleteTodoB(2)
+
+////////////////////////////////////////////////////
+
+const deleteTodoBB = (arr,id) => {
+    let index = arr.findIndex(e => e.id === id) //id บรรทัดนี้เป็น arrgument ที่ pass เข้ามา
+    //console.log(index)  //index 1
+    const a = arr.splice(index,1)
+    //console.log(a) //[ { id: 2, title: 'workout', completed: true } ] ถ้า log a ออกมา จะรู้ว่า ไอ a เนี่ยคือ ก้อน id2 จะเอาก้อนเนี้ยออก
+    return arr;
+}
+console.log(deleteTodoBB(todos,2))
+
+////////////////////////////////////////////////////
+
+function deleteTodoG(n) {
+  todos = todos.filter(todo => todo.id !== n);
+  return todos;
+}
+deleteTodoG(2)
+
+//////////////////////////////////////////////////////
+
 //8
 //9
 //10
