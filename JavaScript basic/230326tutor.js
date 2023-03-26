@@ -201,6 +201,8 @@ const sports = ['boxing', 'football', 'swimming', 'biking'];
 sports.splice(3,0,'kendo', 'judo', 'basketball')
 console.log(sports) //[ 'boxing', 'football', 'swimming', 'kendo', 'judo', 'basketball', 'biking' ]
 
+
+
 //7
 
 //เขียน function deleteTodo(n) ให้ n เท่ากับ id ที่จะลบใน array
@@ -223,13 +225,14 @@ let todos = [
 //findIndex
 //splice it out 1 item
 
-////////ทำเอง ผิด
+////////ได้แล้วววววววววววววววววววววววว
+
 // let deleteTodo = (n) => {
-//   let index = todos.findIndex(e => e.id = n)
-//   todo.splice(index,1)
-//   );
+//   let index = todos.findIndex(e => e.id === n)
+//   todos.splice(index,1)
 //   return todos
-// }
+// };
+
 
 // console.log(deleteTodo(2))
 
@@ -263,7 +266,14 @@ deleteTodoG(2)
 
 //////////////////////////////////////////////////////
 
+
+
 //8
+
+
+
+
+
 //9
 //10
 //11
