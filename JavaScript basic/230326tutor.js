@@ -128,6 +128,67 @@ console.log(foundIndex) //2
 
 //5
 
+//เขียนฟังก์ชั้น หาผลรวมของเลขทุกตัวยกกำลังสองใน array
+
+//input [2,4,3] //4+16+9
+//output 29
+
+let sumandtwo = (arr) => {
+  let result = 0;
+  arr.map(e=>{
+    let temp = 0
+    temp += e * e
+    result += temp
+  })
+  return result
+}
+
+sumandtwo([2,4,3])
+
+//////////////////////////////////////////
+const squareSumC = (int) => {
+  let total = 0
+  int.forEach(e => total += e**2)
+  return total
+}
+squareSumC([2,3,4])
+//////////////////////////////////////// ตรงนี้ยังติด เดี๋ยวกลับมาอ่าน
+//let input = [2,3,4]
+//squareSumC(input)
+
+const arrha = [2,3,4];
+// const result487 =
+//     arrha.reduce((ac,cvalue)=>{
+//         console.log(ac${ac});
+//         console.log(cv${cvalue});
+//         return ac+cvalue**2;
+//     },0)
+    
+//     console.log(result487)
+/////////////////////////////////////////
+// const korhok1 = arr => arr.reduce((accu,curr)=> accu + curr ** 2),0
+const korhok = arr => arr.reduce((accu,curr)=> accu + Math.pow(curr, 2),0)
+
+korhok([2,4,3]) //29
+
+
+//////////////////////////////
+let input123 = [2,4,3]
+
+let outPut123 = input123.reduce(function (acc , cur){
+  let sqrtSum = cur * cur
+  return acc + sqrtSum
+},0)
+
+console.log(outPut123)
+
+
+
+
+
+
+
+
 // 6.) ให้เติมคำว่า kendo,judo,basketball ต่อท้าย swimming ใน array
 //how to insert string to array at specific index
 //https://bobbyhadz.com/blog/javascript-insert-string-at-index
