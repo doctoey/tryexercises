@@ -1,6 +1,7 @@
 //1
 /*
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
+//https://www.freecodecamp.org/news/how-to-iterate-over-objects-in-javascript/
 function sum(obj) {
     code
 }
@@ -33,7 +34,33 @@ function sum1(obj) {
   sum1({ a: 50 , b: 100 , c: 250 }) //400
   console.log(sum1({ a: 50 , b: 100 , c: 250 })) //400
 
+
+
 //2
+
+const arr = [2,3,4,8,12];
+//powArr(arr); //output : [4,9,16,64,144]
+
+let powArr = (x) => {
+ let arrx = x.map(e=>e**2)
+ return arrx
+  
+}
+
+powArr(arr)
+console.log(powArr(arr))
+
+//อีกอัน
+function powArr555(x) {
+  for (let i = 0; i < x.length; i++) {
+    x[i] *= x[i];
+  }
+  return x;
+}
+
+console.log(powArr555(arr)); // Output: [4, 9, 16, 64, 144]
+
+
 //3
 //4
 //5
