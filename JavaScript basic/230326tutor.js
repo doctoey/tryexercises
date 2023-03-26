@@ -121,7 +121,7 @@ console.log(index123456)
 let foundIndex   ;
 tasks123.forEach((element, index) => {
     if(element.id === 3) {
-        foundIndex = index
+        foundIndex = index //index ที่เราจะหา คือ index ที่ 2
     }
 })
 console.log(foundIndex) //2
