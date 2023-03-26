@@ -118,12 +118,13 @@ console.log(index123456)
    
 
 //พี่ปัน
-let foundIndex ;
-array.foreach((element, index) => {
+let foundIndex   ;
+tasks123.forEach((element, index) => {
     if(element.id === 3) {
         foundIndex = index
     }
 })
+console.log(foundIndex) //2
 
 //5
 
