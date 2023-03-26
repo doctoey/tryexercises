@@ -98,6 +98,33 @@ console.log(more20)
 // }
 
 //4
+
+// หา index ที่ id = 3
+//https://bobbyhadz.com/blog/javascript-array-find-index-of-object-by-property#get-the-indexes-of-all-objects-in-an-array-that-match-a-condition
+const tasks123 = [
+  { id: 1, name: 'Fishing' },
+  { id: 2, name: 'Shopping' },
+  { id: 3, name: 'Swimming' },
+  { id: 4, name: 'Football' }
+];
+
+// return 2
+   
+const index123456 = tasks123.findIndex(tasks => {
+  return tasks.id === 3;
+});
+
+console.log(index123456)
+   
+
+//พี่ปัน
+let foundIndex ;
+array.foreach((element, index) => {
+    if(element.id === 3) {
+        foundIndex = index
+    }
+})
+
 //5
 
 // 6.) ให้เติมคำว่า kendo,judo,basketball ต่อท้าย swimming ใน array
