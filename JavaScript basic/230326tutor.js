@@ -68,6 +68,7 @@ console.log(powArr555(arr)); // Output: [4, 9, 16, 64, 144]
 // 6.) ให้เติมคำว่า kendo,judo,basketball ต่อท้าย swimming ใน array
 //how to insert string to array at specific index
 //https://bobbyhadz.com/blog/javascript-insert-string-at-index
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf มีล้านค่า หาว่า biking อยุ่ไหน ใช้ idnexOf 
 const sports = ['boxing', 'football', 'swimming', 'biking'];
 
 // result = [ 'boxing', 'football', 'swimming', 'kendo', 'judo', 'basketball', 'biking' ]
