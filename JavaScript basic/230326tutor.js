@@ -115,7 +115,7 @@ const index123456 = tasks123.findIndex(tasks => {
 });
 
 console.log(index123456)
-   
+tasks.findIndex(e => e.id === 3)
 
 //พี่ปัน
 let foundIndex   ;
