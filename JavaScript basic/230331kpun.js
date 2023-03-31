@@ -43,10 +43,30 @@
 
 //anonymous function
 //parameter ของ callback fn ของ map จะรับ param => คือของที่ออกมาจาก array ออกมาเหมือนวนลูบ ทีละชิ้น(ทีละ item, ทีละ element)
+//ของที่ถูก loop ออกมา จะไปผ่าน callback function => สร้าง array ใหม่ เลยต้อง return ค่า
 
 const array = [1, 2, 3]
-const newarray = array.map((element) => {
-    console.log(element);
-    return;
-})
+// const newarray = array.map((element) => {
+//     console.log(element)
+//     return
+// })
 //1 2 3
+
+const newarray = array.map((element) => {
+    return 'a' + ' ' + element
+})
+
+console.log(newarray) //[ 'a 1', 'a 2', 'a 3' ]
+
+
+let array5 = [1, 2, 3]
+//forEach ไม่สร้าง array ใหม่
+//เลยต้องมีตัวแปรมารับค่า ที่จะทำ ที่เราทำอันนี้คือ เอา array ใหม่มารับ
+const NewArrayforEach = []
+array5.forEach((ele) => {
+    let result
+    result = 'a' + ' ' + ele
+    NewArrayforEach.push(result) 
+})
+
+console.log(NewArrayforEach) //[ 'a 1', 'a 2', 'a 3' ]
