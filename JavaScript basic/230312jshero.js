@@ -240,9 +240,25 @@ concatUp([5, 7], [6, 8]) returns [ 5, 7, 6, 8 ].
 
 
 /*
+/*
+ex.59 Array: slice()
+Write a function halve that copies the first half of an array. With an odd number of array elements, the middle element should belong to the first half.
+
+Example: halve([1, 2, 3, 4]) should return [1, 2].
+*/
+function halve(arr){
+  let halve = Math.ceil(arr.length /2) //ปัดขึ้น ถ้า math.floor ปัดลง
+  let result = arr.slice(0,halve)
+  return result
+}
+
+// halve([1, 2]) returns [ 1 ].
+// halve([1, 2, 3]) returns [ 1, 2 ].
+// halve([1, 2, 3, 4]) returns [ 1, 2 ].
+// halve([1, 2, 3, 4, 5]) returns [ 1, 2, 3 ].
 
 /*
-59 60 61 ข้าม
+60 61 ข้าม
 */
 
 /*
