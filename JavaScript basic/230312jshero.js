@@ -242,7 +242,7 @@ concatUp([5, 7], [6, 8]) returns [ 5, 7, 6, 8 ].
 /*
 
 /*
-59 60 61 64 ข้าม
+59 60 61 ข้าม
 */
 
 /*
@@ -289,6 +289,24 @@ function hello(name = 'world') {
 // hello('Badu') returns 'Hello Badu!'.
 // hello() returns 'Hello world!'.
 
+/*
+ex.64 null
+Write a function cutComment that takes one line of JavaScript and returns a possible line comment trimmed. If the line contains no line comment, null should be returned. For simplicity, we assume that the code does not contain the comment characters within a string.
+
+Example: cutCommt('let foo; // bar') should return 'bar'.
+*/
+function cutComment(line) {
+  const index = line.indexOf('//'); // find the index of the first occurrence of "//"
+  if (index === -1) { // if "//" is not found, return null
+    return null;
+  }
+  const comment = line.substring(index + 2).trim(); // extract the comment and remove whitespace
+  return comment;
+}
+
+// cutComment('let foo; // bar') returns 'bar'.
+// cutComment('let n; // number') returns 'number'.
+// cutComment('let i;') returns null.
 
 /*
 ex. 65. for loop
