@@ -257,8 +257,35 @@ function halve(arr){
 // halve([1, 2, 3, 4]) returns [ 1, 2 ].
 // halve([1, 2, 3, 4, 5]) returns [ 1, 2, 3 ].
 
+/* ex.60
+Write a function list that takes an array of words and returns a string by concatenating the words in the array, separated by commas and - the last word - by an 'and'. An empty array should return an empty string.
+
+Example: list(['Huey', 'Dewey', 'Louie']) should return 'Huey, Dewey and Louie'.
+*/
+
+function list(words) {
+
+  if (words.length === 0) {
+    return '';
+  }
+
+  if (words.length === 1) {
+    return words[0];
+  }
+
+  let wordsExLast = words.slice(0, words.length - 1);
+  let lastWord = words[words.length - 1];
+  return wordsExLast.join(', ') + ' and ' + lastWord;
+}
+
+// list([]) returns ''.
+// list(['love']) returns 'love'.
+// list(['Ernie', 'Bert']) returns 'Ernie and Bert'.
+// list(['Huey', 'Dewey', 'Louie']) returns 'Huey, Dewey and Louie'.
+// list(['C', 'C++', 'Python', 'PHP']) returns 'C, C++, Python and PHP'.
+
 /*
-60 61 ข้าม
+61 ข้าม
 */
 
 /*
