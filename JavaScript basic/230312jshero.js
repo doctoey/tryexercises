@@ -242,8 +242,32 @@ concatUp([5, 7], [6, 8]) returns [ 5, 7, 6, 8 ].
 /*
 
 /*
-59-64 ข้าม
+59 60 61 64 ข้าม
 */
+
+/*
+ex.62 Comments
+Write a function median that takes an array of ascending numbers and returns the median of that numbers.
+
+Example: median([1, 2, 10]) should return 2 and median([1, 2, 10, 100]) should return 6.
+*/
+
+function median(arr) {
+  const n = arr.length;
+  const mid = Math.floor(n / 2);
+  
+  if (n % 2 === 0) { //ตรงกลางบวกกันหารสอง
+    return (arr[mid - 1] + arr[mid]) / 2;
+  } else { //arr.length เลขคี่ เอาตรงกลางเลย
+    return arr[mid];
+  }
+}
+
+// median([1]) returns 1.
+// median([1, 2]) returns 1.5.
+// median([1, 2, 10]) returns 2.
+// median([1, 1, 2, 10, 100, 101]) returns 6.
+
 
 /*
 ex.63 undefined
