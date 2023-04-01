@@ -396,3 +396,27 @@ return num
 // factorial(3) returns 6.
 // factorial(4) returns 24.
 // factorial(9) returns 362880.
+
+/*ex.67 Loops and arrays
+Write a function mean that accepts an array filled with numbers and returns the arithmetic mean of those numbers.
+
+Example: mean([1, 2, 3]) should return (1+2+3)/3 = 2.
+*/
+
+function mean799(arr) {
+  const sum = arr.reduce((acc, val) => acc + val, 0);
+  return sum / arr.length;
+}
+
+function mean997(arr) {
+  let sum = 0;
+  arr.forEach((num) => {
+    sum += num;
+  });
+  return sum / arr.length;
+}
+
+// mean([0]) returns 0.
+// mean([1, 2]) returns 1.5.
+// mean([1, 2, 3]) returns 2.
+// mean([-2, -4, 17, 34]) returns 11.25.
