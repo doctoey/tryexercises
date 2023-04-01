@@ -420,3 +420,17 @@ function mean997(arr) {
 // mean([1, 2]) returns 1.5.
 // mean([1, 2, 3]) returns 2.
 // mean([-2, -4, 17, 34]) returns 11.25.
+
+/*ex.68 while loop
+Write a function spaces that takes a natural number n and returns a string of n spaces.
+
+Example: spaces(1) should return ' '.
+*/
+function spaces(n) {
+  return ' '.repeat(n);
+}
+
+// spaces(0) returns ''.
+// spaces(1) returns ' '.
+// spaces(2) returns '  '.
+// spaces(3) returns '   '.
