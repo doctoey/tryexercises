@@ -69,4 +69,21 @@ var foo = function() {
     return "anythinggggg! "
   }
   let phrase = foo();
-  console.log(phrase);
+  console.log(phrase); //I love Codecademy!
+
+
+  /**
+   Fill in the return statements so clickClack() returns “Moo!” when it is called.
+
+Add any other string to the other return statement.
+   */
+function clickClack() {
+    return "araaraaa..."
+}
+ 
+clickClack = function() {
+    return "Moo!"
+};
+ 
+clickClack(); //Moo!
+
