@@ -253,12 +253,146 @@ Ans  - Several warnings will appear, Forced reflow is a likely performance bottl
 The errors can be resolved by separating the calculation and application of the positioning using two separate for loops. 
 The CSS can also be modified to use modern positioning, like flex instead of relative and absolute positioning.
 
-The warnings that appear are due to the way the element positions are calculated and applied to the elements that move using window.getComputedStyle(), 
+Ans The warnings that appear are due to the way the element positions are calculated and applied to the elements that move using window.getComputedStyle(), 
 and slightly due to the elements that change back and forth from relative to absolute positioning. The changes are calculated and applied within the same for loop, 
 which can be optimized by first calculating the changes, then applying the changes separately, because the operation is synchronous.
-
 
 Why this response?
 This is a good answer because it includes a list of the types of warnings that appear, an explanation of why those errors appear, 
 and a discussion on how you could consider optimizing the code.
+*/
+
+
+
+/*
+Answer the following questions concerning debugging-memory-02.html:(https://static-assets.codecademy.com/Courses/Learn-JavaScript/Memory-Management/debugging-assessment-files/debugging-memory-02.html)
+
+How many objects were added after clicking the first button?
+Why might it be a problem for the order variable to be added to the window?
+
+Ans 10,000 objects were added in memory since an object is pushed to the orders array for each iteration. It’s a problem for the order variable to be added to the window 
+because it will have global scope and can’t be garbage collected.
+Adding variables to the global scope is one of the many issues that can cause memory leaks and overall pollution in your code. 
+Due to the finite amount of memory, anything that is accidentally saved in the global scope should be properly scoped.
+
+Why this answer?
+This is a good response because it mentions why it could be problematic for variables to be added to the window and how to avoid causing that issue in the first place via scoping rules.
+*/
+
+
+
+/*
+Answer the following questions concerning debugging-memory-02.html:(https://static-assets.codecademy.com/Courses/Learn-JavaScript/Memory-Management/debugging-assessment-files/debugging-memory-02.html)
+
+Which function call adds makeDrink objects to memory?
+Where can you identify their allocation size?
+How many makeDrink objects do you expect to find in memory?
+What is the constructor of these objects and on what line of code were they instantiated?
+
+Ans In one Heap snapshot, 10,000 makeDrink objects are added to memory. Expanding the list of makeDrink objects and reading into the __Proto__ property indicates 
+that makeDrink() created these objects and is the constructor. You can expand the Object section to locate the calling function, makeDrinks2(), 
+on line 43. The shallow size and retained size columns indicate the allocated memory.
+
+Why this answer?
+Developer tools have a lot of instrumentation that you can utilize to find the answers to these questions. Of course, 
+in this example it is short so you could also read through the code snippet, but in a larger code base, locating the calling function and stack, 
+identifying the constructor of your objects, and identifying the relative size can become more complicated.
+By hovering over the objects in the heap snapshot list, or expanding them to read more details, you can find each answer. 
+This answer works because it mentions specific steps to take in developer tools to locate the information from the object list, and mentions where to find the information on size.
+*/
+
+
+
+/*
+Answer the following questions concerning debugging-memory-02.html:(https://static-assets.codecademy.com/Courses/Learn-JavaScript/Memory-Management/debugging-assessment-files/debugging-memory-02.html)
+
+Are there any detached elements?
+How can you check?
+
+Ans There aren’t any detached elements. You can check by typing “Detached” into the Memory tab’s filter bar to check if any Detached HTML elements are present or cached.
+
+Why this answer?
+This is a good answer because it explains that there are no detached elements and offers a solution for checking if any exist or not.
+*/
+
+
+
+/*
+How can you use the Performance and Memory tabs in Chrome DevTools or other browser developer tools to test and optimize your code?
+Ans You can use Chrome DevTools to identify performance issues, memory leaks, and other memory issues when analyzing and testing your code.
+With tools like heap snapshots and the performance timeline, you can dig into a ton of details about your code’s memory allocation and performance.
+This can help you answer questions like where memory was allocated from down to the line of code, why a piece of memory isn’t being garbage collected, how memory is growing over time, and more.
+
+Why this response?
+This is a good answer because it identifies specific types of issues you can identify using the browser developer tools, 
+what each specific tool might be used for, and what type of recordings you can take for each tool.
+*/
+
+/*
+Given the following code example, identify what design pattern is being used and what the code does.
+
+function createDog(name, breed, age) {
+ return {
+     name: name,
+     breed: breed,
+     age: age,
+     getDescription() {
+         return `${this.name} is a ${this.breed} that is ${this.age} ${this.age > 1 || this.age === 0 ? "years" : "year"} old.`
+     }
+ }
+}
+ 
+ 
+let moshi = createDog("Moshi", "German Shorthaired Pointer", 1);
+console.log(moshi.getDescription());
+
+The createDog() function uses the factory design pattern. The code includes a function named createDog() that can be used to create new dog objects. 
+The function returns an object that includes the property of a new object, including methods. This particular function has 3 properties, name,breed, age, 
+and a method, getDescription(). The getDescription() method returns a description of the object using the properties of the object. Later in the code, 
+a dog object is instantiated and assigned to the variable moshi. The getDescription() method is used to log a description of the moshi object.
+
+Rationale: We can identify the factory pattern via the structure of the code. In this case, it is returning an object, so we know it is a factory. 
+We can check further details to verify. For example, the prototype of the moshi object is the default Object rather than a createDog() prototype, 
+so we know it is not using the prototype pattern. Additionally, if we log the object, 
+we’ll see that the methods are directly on the object and are not accessed via an inheritance chain.
+*/
+
+/*
+Given a code example, identify what design pattern can be used to refactor the code.
+
+function createAirplane(id) {
+ return {
+   id: id,
+   nearbyAirplanes: {}, 
+   getLocation() {
+    // code to get latitude, longitude, and altitude
+    return [lat, lon, alt]
+  },
+  scanADSBOut() {
+    // Code that uses an antenna from nearby airplanes to find nearby airplanes based on proximity of latitude, longitude, and altitude
+  },
+  checkForCrash() {
+    let location = this.getLocation();
+    // Code that checks if locations of nearby airplanes are within X miles of each other and calculates trajectory based on location and altitude
+  },
+
+}
+}
+
+let flight1 = createAirplane(1);
+let flight2 = createAirplane(2);
+let flight3 = createAirplane(3);
+
+flight1.scanADSBOut(); // This method scans for any planes that are nearby and stores the values in the `nearbyAirplanes` property
+console.log(flight1) // After logging the `flight1` object, it’ll display the latitude, longitude, and altitude in the `nearbyAirplanes` object, along with other properties
+flight1.checkForCrash(); // This does a brute force check to check for an impending crash by using the values in the `nearbyAirplanes` property and the airplane's current location, using the `getLocation()` method
+
+
+The code requires airplane to airplane communication. In real life, an Air Traffic Controller mediates plane to plane communication about flight patterns and location. 
+This code should be refactored using the mediator pattern. An “AirTrafficController” class can be created that keeps track of which planes are in the sky and what their locations are. 
+This class would also handle any communication to plane objects to update for course corrections.
+
+Rationale: For this solution, we wanted to encapsulate the communication between objects, so we identified the issue was behavioral 
+and not necessarily based on a structural issue or how the object is created. The mediator pattern was a good option 
+because it is specifically meant to encapsulate behavior between different objects.
 */
