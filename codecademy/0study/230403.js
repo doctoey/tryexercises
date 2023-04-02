@@ -147,3 +147,118 @@ const shopForBeans = () => {
 //1. Heading to the store to buy beans...
 // 2. I bought black beans because they were on sale.
 // 3. Great! I'm making black beans for dinner tonight!
+
+
+/*
+Explain how JavaScript uses the stack and heap to manage memory.
+
+The stack is used for static storage, where the size of an object is known when the code is compiled. Since the size is known, 
+a fixed amount of data is reserved for the object, and the stack remains ordered.
+
+The heap provides dynamic memory allocation at runtime for data types that don’t have a fixed size, like objects and functions. 
+These are reference values and we keep track of where to find them in the unstructured heap using a fixed-size reference in the stack.
+
+Why this answer?
+This solution explains how the stack uses static storage(https://static-assets.codecademy.com/Courses/Learn-JavaScript/Event-Loop-and-Concurrency/call-stack-applet/call-stack.html)
+ while the heap uses an unstructured format for dynamic memory allocation.
+*/
+
+/*
+Explain the differences between the two algorithms that JavaScript uses for garbage collection.
+
+With the reference-counting algorithm, if a reference count for an object drops down to zero, there are no more references to the object in your program, 
+so the JavaScript engine can destroy the object and garbage collect any memory it was using.
+
+The Mark-and-Sweep algorithm, meanwhile, runs periodically and starts at the root of your code, the global object. From the root, 
+it’ll “sweep” across your code to find and mark anything that is “reachable” by traversing across all of the variables.
+
+After that process, any of the variables that are unmarked (and therefore were not reachable) will be garbage collected during the sweep phase.
+
+Why this answer?
+These are the primary algorithms used by browsers to clear memory. This answer explains how the reference-counting algorithm counts references in general 
+and how it can result in the circular reference issue. 
+It then explains how the Mark-and-Sweep algorithm has a stronger approach since it traverses nodes to see which are ‘reachable’ at any given point in time.
+*/
+
+/* Identify the memory issues in the code below and fix them.
+function buildMassiveString() {
+    massiveString = Array(1000).fill("STRING").join();
+}
+buildMassiveString();
+
+let jin = {role: "vocalist"}
+let suga = {role: "rapper"}
+let jHope = {role: "rapper"}
+let rm = {role: "lead and rapper"}
+let jimin = {role: "vocalist"}
+let v = {role: "vocalist"}
+let jungkook = {role: "vocalist"}
+
+rm.laughingBuddy = jin
+suga.bestie = jHope
+jungkook.partnerInCrime = v
+v.bestie = jimin
+v.partnerInCrime = jungkook
+
+let bts = [jin, suga, jHope, rm, jimin, v, jungkook]
+
+console.log(bts)
+*/
+//solution 
+function buildMassiveString() {
+    let massiveString = Array(1000).fill("STRING").join();
+}
+buildMassiveString();
+
+
+let jin = {role: "vocalist"}
+let suga = {role: "rapper"}
+let jHope = {role: "rapper"}
+let rm = {role: "lead and rapper"}
+let jimin = {role: "vocalist"}
+let v = {role: "vocalist"}
+let jungkook = {role: "vocalist"}
+
+rm.laughingBuddy = jin
+suga.bestie = jHope
+jungkook.partnerInCrime = "v"
+v.bestie = jimin
+v.partnerInCrime = "jungkook"
+
+let bts = [jin, suga, jHope, rm, jimin, v, jungkook]
+
+console.log(bts)
+
+
+/*
+pen the debugging-memory-01.html file in a new tab. (https://static-assets.codecademy.com/Courses/Learn-JavaScript/Memory-Management/debugging-assessment-files/debugging-memory-01.html)
+
+The code here adds 1,001 elements to the page: 1 ‘parent’ element and 1,000 additional elements.
+
+Initially, all of the child elements have position:relative positioning.
+
+When you click the “Move elements” button, half of the elements are converted to have position: absolute. The other half are moved with a computed value for the left property.
+
+This assessment requires a preparation task: Record a Performance profile and click the button at least 10 times to capture the performance metrics.
+
+Based on what you’ve learned and information found using your browser’s Developer Tools, answer the following questions:
+
+What warnings are you likely to encounter when running this code?
+What type of design decisions can you make to avoid this type of result and improve performance?
+
+
+
+Ans  - Several warnings will appear, Forced reflow is a likely performance bottleneck, Long task took x ms, and Handler took x ms.
+
+The errors can be resolved by separating the calculation and application of the positioning using two separate for loops. 
+The CSS can also be modified to use modern positioning, like flex instead of relative and absolute positioning.
+
+The warnings that appear are due to the way the element positions are calculated and applied to the elements that move using window.getComputedStyle(), 
+and slightly due to the elements that change back and forth from relative to absolute positioning. The changes are calculated and applied within the same for loop, 
+which can be optimized by first calculating the changes, then applying the changes separately, because the operation is synchronous.
+
+
+Why this response?
+This is a good answer because it includes a list of the types of warnings that appear, an explanation of why those errors appear, 
+and a discussion on how you could consider optimizing the code.
+*/
