@@ -29,8 +29,8 @@ class Contact extends React.Component {
 
     const contactInfo = (
       <ul>
-        <li>client@example.com</li>
-        <li>555.555.5555</li>
+        <li>0123456@example.com</li>
+        <li>02.223.2222</li>
       </ul>
     );
 
