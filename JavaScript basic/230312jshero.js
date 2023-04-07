@@ -439,7 +439,13 @@ function spaces(n) {
 // spaces(3) returns '   '.
 
 
-/* ex.77
+
+
+/* ex.77 Recursion
+Write a function reverse that reverses the order of the characters in a string. The function should be recursive.
+
+Example: reverse('live') should return 'evil'.
+
 */
 
 let reverse = (ele) => {
@@ -447,4 +453,9 @@ let reverse = (ele) => {
   return a
  }
  
- reverse('abc')
+// reverse('abc')
+// reverse('') returns ''.
+// reverse('X') returns 'X'.
+// reverse('az') returns 'za'.
+// reverse('12345') returns '54321'.
+// reverse('live') returns 'evil'.
