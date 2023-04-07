@@ -320,6 +320,7 @@ Write a function hello having one parameter and returning 'Hello <parameter>!'. 
 
 Example: hello('Nala') should return 'Hello Nala!'.
 */
+
 function hello(name) {
   name = name || 'world';
   return `Hello ${name}!`;
@@ -340,6 +341,7 @@ Write a function cutComment that takes one line of JavaScript and returns a poss
 
 Example: cutCommt('let foo; // bar') should return 'bar'.
 */
+
 function cutComment(line) {
   const index = line.indexOf('//'); // find the index of the first occurrence of "//"
   if (index === -1) { // if "//" is not found, return null
@@ -375,8 +377,7 @@ return number
 // addTo(3) returns 6.
 // addTo(9) returns 45.
 
-/*
-ex.66 Factorial
+/* ex.66 Factorial
 Write a function factorial that calculates the factorial of a positive integer.
 
 Example: factorial(3) should return 6.
@@ -399,7 +400,7 @@ return num
 // factorial(4) returns 24.
 // factorial(9) returns 362880.
 
-/*ex.67 Loops and arrays
+/* ex.67 Loops and arrays
 Write a function mean that accepts an array filled with numbers and returns the arithmetic mean of those numbers.
 
 Example: mean([1, 2, 3]) should return (1+2+3)/3 = 2.
@@ -423,7 +424,7 @@ function mean997(arr) {
 // mean([1, 2, 3]) returns 2.
 // mean([-2, -4, 17, 34]) returns 11.25.
 
-/*ex.68 while loop
+/* ex.68 while loop
 Write a function spaces that takes a natural number n and returns a string of n spaces.
 
 Example: spaces(1) should return ' '.
