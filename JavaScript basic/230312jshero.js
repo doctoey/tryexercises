@@ -437,3 +437,14 @@ function spaces(n) {
 // spaces(1) returns ' '.
 // spaces(2) returns '  '.
 // spaces(3) returns '   '.
+
+
+/* ex.77
+*/
+
+let reverse = (ele) => {
+  let a = ele.toString().split('').reverse().join('')
+  return a
+ }
+ 
+ reverse('abc')
