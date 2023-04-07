@@ -132,7 +132,9 @@ getFirstElement([1, 2]) returns 1.
 getFirstElement(['Firefox', 'Chrome']) returns 'Firefox'.
 */
 
+
 //ขาด 53 ยังไม่เข้าใจ
+
 
 /*ex.54 Array: length
 Write a function getLastElement that takes an array and returns the last element of the array.
