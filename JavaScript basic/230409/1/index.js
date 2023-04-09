@@ -1,12 +1,16 @@
 function ageClassification(age) {
 
     // Your code here
-    if(age <=18) {
+    if (isNaN(age)) {
+        return "Error: Pls Enter a number"
+    } else if(age >= 0 && age <=18) {
         return "Minor"
     } else if(age > 18 && age < 65 ) {
         return "Adult"
-    } else {
+    } else if(age >= 65){
         return "Senior"
+    } else {
+        return "Invalid age"
     }
 
 }
@@ -17,6 +21,9 @@ console.log(ageClassification(28)) //Adult
 console.log(ageClassification(65)) //Senior
 console.log(ageClassification(66)) //Senior
 console.log(ageClassification(999)) //Senior
+console.log(ageClassification(-1)) //Invalid age
+console.log(ageClassification('age')) //Error: Pls Enter a number
+
 
 
 
