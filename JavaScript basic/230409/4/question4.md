@@ -9,5 +9,5 @@ Output: [1, 3, 5, 7, 9]
 
 Example 2:
 Input: [2, 4, 6, 7]
-Output: []
+Output: [7]
 ```
