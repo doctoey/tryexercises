@@ -11,7 +11,7 @@ return uniqueArrnum
 }
 
 // let arrnum = [1, 2, 3, 3, 4, 4, 5, 6, 6];
-// let uniqueArrnum = [...new Set(arrnum)];
+// let uniqueArrnum = [...new Set(arrnum)]; //Set เป็นโครงสร้างข้อมูลที่ไม่อนุญาตให้มีค่าที่ซ้ำกัน
 // console.log(uniqueArrnum); // [1, 2, 3, 4, 5, 6]
 
 console.log(uniqueOddNumbers([1, 2, 3, 4, 5, 5, 7, 7, 9, 10])) //[ 1, 3, 5, 7, 9 ]
