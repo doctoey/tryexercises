@@ -438,9 +438,63 @@ function spaces(n) {
 // spaces(2) returns '  '.
 // spaces(3) returns '   '.
 
+/* ex.76 Functions call functions
+Write a function sum that takes an array of numbers and returns the sum of these numbers. 
+Write a function mean that takes an array of numbers and returns the average of these numbers. 
+The mean function should use the sum function.
+*/
+
+// Function to calculate the sum of an array of numbers
+function sum7663(numbers) {
+  let total = 0; // Initialize a variable to store the sum
+  for (let i = 0; i < numbers.length; i++) { // Iterate through the array
+    if (typeof numbers[i] === 'number') { // Check if the element is a number
+      total += numbers[i]; // Add the number to the total sum
+    }
+  }
+  return total; // Return the final sum
+}
+
+// Function to calculate the average of an array of numbers using the sum function
+function mean7663(numbers) {
+  if (numbers.length === 0) {
+    return 0; // Return 0 for empty arrays to avoid division by zero
+  }
+  return sum7663(numbers) / numbers.length; // Call the sum function and divide by array length to get the average
+}
 
 
 
+let sum760 = (arr) => {
+  let result = 0
+  for(let i = 0; i<arr.length;i++){
+    result += arr[i]
+  }
+    return result
+  }
+  
+  
+  let mean760 = (arr) => {
+  let result = 0
+  for(let i = 0; i<arr.length;i++){
+    result += arr[i]
+  }
+    return result / arr.length
+  }
+
+
+  // sum([0]) returns 0
+  // sum([1, 2]) returns 3.
+  // sum([1, 4, 10, 85]) returns 100.
+  // sum([-2, -4, 17, 34]) returns 45.
+
+  // mean([0]) returns 0.
+  // mean([1, 2]) returns 1.5.
+  // mean([1, 4, 10, 85]) returns 25.
+  // mean([-2, -4, 17, 34]) returns 11.25.
+
+
+  
 /* ex.77 Recursion
 Write a function reverse that reverses the order of the characters in a string. The function should be recursive.
 
