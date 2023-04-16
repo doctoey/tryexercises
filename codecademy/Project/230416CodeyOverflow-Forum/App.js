@@ -4,11 +4,11 @@ import { comments } from './commentData';
 
 const App = () => {
 return (
-<div>
-{comments.map((comment, index) => (
-<Card key={index} commentObject={comment} />
-))}
-</div>
+  <div>
+    {comments.map((comment, index) => (
+      <Card key={index} commentObject={comment} />
+    ))}
+  </div>
 );
 };
 
