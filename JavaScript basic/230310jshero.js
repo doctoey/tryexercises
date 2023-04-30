@@ -21,6 +21,18 @@ let toCase1578 = (text) => {
 // toCase1578('Mthatha') returns 'mthatha-MTHATHA'.
 // toCase1578('Johannesburg') returns 'johannesburg-JOHANNESBURG'.
 
+/*ex.22
+Write a function shortcut that takes two strings and returns the initial letters of theses strings.
+
+Example: shortcut('Amnesty', 'International') should return 'AI'.
+*/
+
+function shortcut22(para1, para2) {
+  return para1.charAt(0) + para2.charAt(0);
+}
+// shortcut22('Amnesty', 'International') returns 'AI'.
+// shortcut22('Java', 'Script') returns 'JS'.
+
 /* ex.27
 Write a function normalize, that replaces '-' with '/' in a date string.
 
