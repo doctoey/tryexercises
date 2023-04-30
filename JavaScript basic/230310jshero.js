@@ -1,3 +1,26 @@
+/* ex.20
+Write a function length that takes a string and returns the number of characters of the string.
+
+Example: length('sun') should return 3.
+*/
+let length20 = (sun) => sun.length
+
+// length20('sun') returns 3.
+// length20('Hello world!') returns 12.
+// length20('') returns 0.
+
+/* ex.21
+Write a function toCase that takes a string and returns that string in lowercase and uppercase with - as delimiter.
+
+Example: toCase('Mthatha') should return 'mthatha-MTHATHA'.
+*/
+let toCase1578 = (text) => {
+  return text.toLowerCase() + '-' + text.toUpperCase();
+}
+
+// toCase1578('Mthatha') returns 'mthatha-MTHATHA'.
+// toCase1578('Johannesburg') returns 'johannesburg-JOHANNESBURG'.
+
 /* ex.27
 Write a function normalize, that replaces '-' with '/' in a date string.
 
