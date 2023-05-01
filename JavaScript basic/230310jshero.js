@@ -33,6 +33,24 @@ function shortcut22(para1, para2) {
 // shortcut22('Amnesty', 'International') returns 'AI'.
 // shortcut22('Java', 'Script') returns 'JS'.
 
+/*ex.23
+Write a function firstChar, which returns the first character that is not a space when a string is passed.
+
+Example: firstChar(' Rosa Parks ') should return 'R'.
+*/
+function firstChar23(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== ' ') {
+      return str[i];
+    }
+  }
+  return null; // if string contains only spaces, return null
+}
+
+// firstChar23('Rosa') returns 'R'.
+// firstChar23(' Louise') returns 'L'.
+// firstChar23('  Parks') returns 'P'.
+
 /* ex.27
 Write a function normalize, that replaces '-' with '/' in a date string.
 
