@@ -51,6 +51,24 @@ function firstChar23(str) {
 // firstChar23(' Louise') returns 'L'.
 // firstChar23('  Parks') returns 'P'.
 
+/*ex.24
+Write a function indexOfIgnoreCase taking two strings and determining the first occurrence of the second string in the first string. The function should be case insensitive.
+
+Example: indexOfIgnoreCase('bit','it') and indexOfIgnoreCase('bit','IT') should return 1.
+*/
+function indexOfIgnoreCase24 (s1, s2) {
+ let s1Lower = s1.toLowerCase();
+  let s2Lower = s2.toLowerCase();
+return s1Lower.indexOf(s2Lower);
+}
+
+// indexOfIgnoreCase24('bit', 'it') returns 1.
+// indexOfIgnoreCase24('bit', 'IT') returns 1.
+// indexOfIgnoreCase24('BYTE', 'te') returns 2.
+// indexOfIgnoreCase24('BYTE', 'TE') returns 2.
+// indexOfIgnoreCase24('BiT', 'bIt') returns 0.
+// indexOfIgnoreCase24('bit', 'bt') returns -1.
+
 /* ex.27
 Write a function normalize, that replaces '-' with '/' in a date string.
 
