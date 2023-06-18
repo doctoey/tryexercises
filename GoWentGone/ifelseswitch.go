@@ -33,4 +33,39 @@ func main() {
 	} else {
 		fmt.Println("x power n is: ", lim)
 	}
+
+	//switch case
+
+	// today := "monday"
+	//switch today { //ใส่หรือไม่ใส่วงเล็บก็ได้
+	switch today := "monday"; today { 
+	case "monday":
+		fmt.Println("today is monday") //ไม่ต้องใส่ break
+		fallthrough                    //ถ้าจะให้มันเข้า case ถัดไปต้องใส่ fallthrough
+	case "tuesday":
+		fmt.Println("today is tuesday")
+	case "wednesday":
+		fmt.Println("today is wednesday")
+	case "thursday":
+		fmt.Println("today is thursday")
+	//หรือจะใส่ , ก็ได้ เช่น
+	case "friday", "saturday":
+		fmt.Println("today is friday or saturday")
+	default:
+		fmt.Println("วันนี้วันอารายยยยยยยย")
+	}
+
+	//no expression switch
+	//ถ้าไม่ใส่ expression จะเป็น if else
+	//ถ้าใส่ expression จะเป็น switch case
+
+	numex := 10
+	switch {
+	case numex > 0:
+		fmt.Println("numex is positive")
+	case numex < 0:
+		fmt.Println("numex is negative")
+	default:
+		fmt.Println("numex is zero")
+	}
 }
