@@ -63,14 +63,11 @@ func main() {
 	x := compute(hypo)
 	fmt.Println(x)
 
-
 	i, c := adder()
 	fmt.Println(i())
 	fmt.Println(c())
 
 }
-
-
 
 // func maintoo() {
 // 	i, c := adder()
