@@ -1,3 +1,3 @@
-module pointer
+module map
 
 go 1.20
