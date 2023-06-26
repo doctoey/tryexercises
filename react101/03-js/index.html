@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Hello World");
+    </script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" id="title">
+        <button id="submit">submit</button>
+    </div>
+   
+    <script src="index.js">
+        let app = document.getElementById('app');
+        let tittleInput = document.getElementById('input');
+        let submitButton = document.getElementById('button');
+        let ul = document.createElement('ul');
+        let liHome = document.createElement('li');
+        liHome.innerText = 'Home';
+        ul.appendChild(liHome);
+
+        submitButton.addEventListener('click', function(){
+            let li = document.createElement('li');
+            li.innerText = tittleInput.value;
+            tittleInput.value = '';
+            ul.appendChild(li);
+        });
+
+        app.appendChild(ul);
+
+    </script>
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+</body>
+</html>
