@@ -1,5 +1,5 @@
 {
-  "name": "09-homework",
+  "name": "homework2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "async": "^3.2.4",
+    "thai-baht-text": "^1.0.8"
   }
 }
