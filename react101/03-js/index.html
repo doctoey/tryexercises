@@ -1,114 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <style>
-        * {
-            font-family: 'Kanit', sans-serif;
-            box-sizing: border-box;
-            background-color: #ADC5B7;
-            font-size: 1.25rem;
-        }
-
-        #app {
-            justify-content: center;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50vh;
-        }
-
-        .list {
-            list-style: none;
-        }
-
-        .todo {
-            color: mediumvioletred;
-        }
-
-        .title {
-            border-radius: 10px;
-            background-color: aquamarine;
-        }
-
-        .button {
-            border-radius: 10px;
-            background-color: cadetblue;
-        }
-
-        ul {
-            color: deeppink;
-        }
-
-        ul> :nth-child(1) {
-            color: blueviolet;
-        }
-
-        ul> :nth-child(2) {
-            color: cyan;
-        }
-
-        ul> :nth-child(3) {
-            color: blue;
-        }
-
-        ul> :nth-child(4) {
-            color: springgreen
-        }
-
-        ul> :nth-child(5) {
-            color: yellow;
-        }
-
-        ul> :nth-child(6) {
-            color: coral
-        }
-
-        ul> :nth-child(7) {
-            color: crimson
-        }
-    </style>
+    <title>Document</title>
+    <script>
+        console.log("Hello World");
+    </script>
 </head>
-
 <body>
-    <div class="container">
-        <div id="app">
-            <div class="todo" style="margin-bottom: 15px;">
-                TO DO LIST
-            </div>
-            <input type="text" id="title" class="title">
-            <button id="submit" class="button">Submit</button>
-            <ul id="list" class="list"></ul>
-        </div>
+    <div id="app">
+        <input type="text" id="title">
+        <button id="submit">submit</button>
     </div>
 
-
-    <script>
+    <script src="index.js">
         let app = document.getElementById('app');
-        let titleInput = document.getElementById('title');
-        let submitButton = document.getElementById('submit');
-        let ul = document.getElementById('list');
+        let tittleInput = document.getElementById('input');
+        let submitButton = document.getElementById('button');
+        let ul = document.createElement('ul');
+        let liHome = document.createElement('li');
+        liHome.innerText = 'Home';
+        ul.appendChild(liHome);
 
-        submitButton.addEventListener('click', function () {
+        submitButton.addEventListener('click', function(){
             let li = document.createElement('li');
-            li.innerText = titleInput.value;
-            titleInput.value = '';
-            li.addEventListener('click', function () {
-                li.style.textDecoration = 'line-through';
-            });
+            li.innerText = tittleInput.value;
+            tittleInput.value = '';
             ul.appendChild(li);
         });
-    </script>
 
+        app.appendChild(ul);
+
+    </script>
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
 </body>
-
 </html>
