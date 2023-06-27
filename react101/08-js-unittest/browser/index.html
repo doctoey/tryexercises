@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.4.css">
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script>
+
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function fizzBuzz(input) {
+            return input;
+        }
+
+        QUnit.test("add", function (assert) {
+            assert.equal(add(1, 2), 3);
+            assert.equal(add(2, 2), 4);
+            assert.equal(add(3, 2), 5);
+        });
+
+        QUnit.module("fizzBuzz", function () {
+            QUnit.test("should return 1 if input is 1", function (assert) {
+                assert.equal(fizzBuzz(1), 1);
+            });
+        });
+
+        QUnit.module('Divide', function () {
+            QUnit.test('should return 2 if input is 4 and 2', function (assert) {
+                assert.equal(divide(4, 2), 2);
+            });
+        });
+    </script>
+</body>
+</html>
