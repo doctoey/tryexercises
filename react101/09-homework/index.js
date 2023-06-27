@@ -1,15 +1,3 @@
-function add(a, b) {
-    return a + b;
-}
-
-function fizzBuzz(num) {
-    if (input % 3 === 0) {
-        return 'Fizz'
-    }
-
-    return `${num}`
-}
-
 //การบ้าน
 //convert ตัวเลข -> ภาษาไทย
 // 1 -> หนึ่ง
@@ -20,10 +8,9 @@ function fizzBuzz(num) {
 // 1000 -> หนึ่งพัน
 
 function convert(num) {
-
+    
 }
 
 module.exports = {
-    add,
-    fizzBuzz
+    convert
 }
