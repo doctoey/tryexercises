@@ -15,6 +15,10 @@ dist-ssr
 # Ignore test-related files
 /coverage.data
 /coverage/
+.coverage
+.testrepository/
+cover/
+.coverage*
 
 # Editor directories and files
 .vscode/*
