@@ -254,3 +254,5 @@ console.log(typeof drink); //object
 // 5 -> V
 // ไม่ใช้ library ใดๆ
 // 
+
+
