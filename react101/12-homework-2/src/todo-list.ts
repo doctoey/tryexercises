@@ -1,10 +1,10 @@
-import { Todo } from './todo';
+import { Todo } from "./todo";
 
 interface ITodoList {
-  addTodo(todo: Todo): void
-  removeTodoById(id: number): void
-  markTodoCompleted(id: number): void 
-  getTodos(): Todo[]
+  addTodo(todo: Todo): void;
+  removeTodoById(id: number): void;
+  markTodoCompleted(id: number): void;
+  getTodos(): Todo[];
 }
 
 export class TodoList implements ITodoList {
@@ -20,11 +20,11 @@ export class TodoList implements ITodoList {
   }
 
   removeTodoById(id: number): void {
-    this.todos = this.todos.filter(todo => todo.getId() !== id);
+    this.todos = this.todos.filter((todo) => todo.getId() !== id);
   }
 
   markTodoCompleted(id: number): void {
-    const todo = this.todos.find(todo => todo.getId() === id);
+    const todo = this.todos.find((todo) => todo.getId() === id);
     if (todo) {
       todo.toggleCompleted();
     }
