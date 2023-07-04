@@ -37,6 +37,11 @@ getData()
     console.error(error);
   });
 
+// getData()
+//   .then((value)=> {
+
+//   })
+
 // 2. handling Promise with async / await
 async function run() {
   try {
@@ -49,3 +54,15 @@ async function run() {
 }
 
 run();
+
+/// 3. handling Promise with Promise.all
+Promise.all([
+  getData(), //1s
+  processData(''), //2s
+]).then([valueGetData, valueProcessData])
+
+/// 
+Promise.race([
+  getData(), //1s
+  processData(''), //2s
+]).then([valueGetData, valueProcessData])
