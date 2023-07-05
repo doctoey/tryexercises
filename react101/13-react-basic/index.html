@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- <main>
+        <h1>My Blog</h1>
+        <article>
+            <h2>My first blog post</h2>
+            <p class="text">this is content ...</p>
+        </article>
+    </main> -->
+    
+
+    <script type="text/babel">
+        // const h2 = React.createElement('h2', null, 'My first blog post')
+        // const paragrph = React.createElement('p', {className: 'text'}, 'this is content ...')
+        // const article = React.createElement('article', null, )
+        // const h1 = React.createElement('h1', null, 'My Blog')
+        // const main = React.createElement('main', {id:'main'},h1 ,article)
+
+        const main = (
+            <React.Fragment>
+                <main>
+                    <h1>My Blog</h1>
+                    <article>
+                        <h2>My first blog post</h2>
+                        <p className="text">this is content ...</p>
+                    </article>
+                </main>
+            </React.Fragment>
+        )
+
+        ReactDOM.createRoot(document.getElementById('root')).render(main)
+        // ReactDOM.render(null, document.getElementById('root'))
+    </script>
+</body>
+</html>
