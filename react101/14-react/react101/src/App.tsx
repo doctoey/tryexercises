@@ -1,4 +1,5 @@
 import "./App.css";
+import IU from "../src/image/20220918_022411.jpg"
 
 interface Student {
   id: number;
@@ -37,6 +38,8 @@ function App() {
             name: [{student.id}]{student.name}</li>;
         })}
       </ul>
+      <img src={IU} alt="IU" width="300" />
+      
 
       {/* <Profile /> */}
     </>
