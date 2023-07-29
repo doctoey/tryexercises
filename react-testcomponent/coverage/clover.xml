@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1690624308983" clover="3.2.0">
+  <project timestamp="1690624308983" name="All files">
+    <metrics statements="28" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="4" elements="38" coveredelements="23" complexity="0" loc="28" ncloc="28" packages="1" files="1" classes="1"/>
+    <file name="index.tsx" path="/Users/doctoey/Desktop/code/test-component-gun-ter/src/intro-to-component-testing/index.tsx">
+      <metrics statements="28" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="4"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="13" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="42" count="0" type="stmt"/>
+      <line num="44" count="0" type="stmt"/>
+      <line num="45" count="0" type="stmt"/>
+      <line num="46" count="0" type="stmt"/>
+      <line num="48" count="2" type="stmt"/>
+      <line num="56" count="0" type="stmt"/>
+      <line num="59" count="0" type="stmt"/>
+      <line num="62" count="0" type="stmt"/>
+      <line num="79" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
