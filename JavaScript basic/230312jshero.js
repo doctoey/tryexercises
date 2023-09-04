@@ -419,6 +419,14 @@ function mean997(arr) {
   return sum / arr.length;
 }
 
+let mean555444 = (arr) => {
+  let sum = 0
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum / arr.length
+}
+
 // mean([0]) returns 0.
 // mean([1, 2]) returns 1.5.
 // mean([1, 2, 3]) returns 2.
@@ -433,10 +441,160 @@ function spaces(n) {
   return ' '.repeat(n);
 }
 
+function spaces555444343(n) {
+  if (n < 0) {
+    return '';
+  }
+  
+  return ' '.repeat(n);
+}
+
 // spaces(0) returns ''.
 // spaces(1) returns ' '.
 // spaces(2) returns '  '.
 // spaces(3) returns '   '.
+
+/*
+ex.69 do...while loop
+Exercise
+Write a function lcm that takes two natural numbers and calculates their least common multiple (lcm). The lcm of two natural numbers a und b is the smallest natural number that is divisible by a and b.
+ครน.
+Example: lcm(4, 6) should return 12.
+*/
+
+function lcm(a, b) {
+  // Find the maximum of the two numbers
+  let max = Math.max(a, b);
+
+  // Start with the maximum as a potential LCM
+  let lcm = max;
+
+  // Keep incrementing the potential LCM until it is divisible by both a and b
+  while (true) {
+    if (lcm % a === 0 && lcm % b === 0) {
+      // If the potential LCM is divisible by both a and b, it's the LCM
+      return lcm;
+    }
+    // If not, increment the potential LCM and check again
+    lcm += max;
+  }
+}
+
+// lcm(1, 1) returns 1.
+// lcm(1, 2) returns 2.
+// lcm(2, 3) returns 6.
+// lcm(3, 2) returns 6.
+// lcm(4, 6) returns 12.
+// lcm(5, 7) returns 35.
+// lcm(6, 8) returns 24.
+// lcm(10, 20) returns 20.
+// lcm(20, 10) returns 20.
+/*
+lcm(5, 7) returns 35.
+1. ตัวแรก ฟังก์ชันจะหาตัวเลขที่มากที่สุดระหว่างตัวเลขทั้งสอง ซึ่งในกรณีนี้คือ 7 ดังนั้น lcm จะเริ่มต้นที่ 7 เอง.
+2. จากนั้นฟังก์ชันเข้าสู่ลูป while ที่วนลูปไปเรื่อย ๆ (while (true)) และตรวจสอบว่า lcm ปัจจุบันหารด้วยทั้ง 5 และ 7 ลงตัวหรือไม่โดยใช้ตัวหารเหลือ (%) 
+ในกรณีนี้ lcm % a ตรวจสอบว่า 7 หารด้วย 5 ได้หรือไม่ ซึ่งในกรณีนี้ไม่ได้ ดังนั้นเงื่อนไขกลายเป็น false.
+3. เนื่องจากเงื่อนไขเป็น false ฟังก์ชันจะเพิ่มค่า lcm อีก 7 ทำให้ lcm เป็น 14.
+4. จากนั้นมันตรวจสอบอีกครั้งว่า lcm หารด้วยทั้ง 5 และ 7 หรือไม่ ตอนนี้ 14 % 5 ก็ยังไม่เท่ากับ 0 ดังนั้นเงื่อนไขยังคงเป็น false อีกครั้ง.
+5. มันจะเพิ่มค่า lcm อีก 7 และตรวจสอบเงื่อนไขอีกครั้ง แต่ในที่นี้ลูปจะทำงานต่อไปเรื่อย ๆ เนื่องจากไม่มีค่าใดที่ทำให้ทั้งสองเงื่อนไขเป็น true นี่เป็นเพราะ 5 และ 7 เป็นจำนวนเฉพาะ 
+และ LCM ของพวกเขาคือผลคูณของพวกเขาคือ 5 * 7 = 35 โดยที่ลูปไม่สามารถหาค่าใด ๆ ที่ทำให้ทั้งสองเงื่อนไขเป็น true ซึ่งทำให้ลูปทำงานต่อไปตลอดเวลาและฟังก์ชันไม่สามารถคืนผลลัพธ์ได้.
+*/
+
+function lcmWeb(a, b) {
+
+  let theLCM = 0;
+  let remainderA;
+  let remainderB;
+
+  do {
+
+    theLCM++;
+    remainderA = theLCM % a;
+    remainderB = theLCM % b;
+
+  } while (remainderA !== 0 || remainderB !== 0)
+
+  return theLCM;
+}
+
+/* ex.70 gcd (greatest common divisor) หรม.
+Write a function gcd that takes two natural numbers and calculates their gcd.
+Example: gcd(6, 15) should return 3.
+*/
+
+let gcd1234567 = (a, b) => {
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+// gcd(1, 1) returns 1.
+// gcd(1, 2) returns 1.
+// gcd(2, 3) returns 1.
+// gcd(2, 4) returns 2.
+// gcd(6, 15) returns 3.
+// gcd(12, 18) returns 6.
+// gcd(18, 12) returns 6.
+// gcd(15, 45) returns 15.
+// gcd(45, 15) returns 15.
+
+/*
+gcd(6, 15) returns 3.
+
+1.นำ a (6) หารด้วย b (15) และเก็บเศษไว้ใน b:
+6 % 15 = 6
+
+2.สลับค่า a และ b:
+a = 15
+b = 6
+
+3.ทำซ้ำขั้นตอน 1 และ 2 จนกว่า b จะเป็น 0:
+15 % 6 = 3
+a = 6
+b = 3
+
+4.15 % 3 = 0
+
+5.เมื่อ b เป็น 0, ค่า a ที่เหลือคือ GCD ของ 6 และ 15, ซึ่งในกรณีนี้คือ 3.
+*/
+/*
+แบบคิดว่าไม่งง 1
+1.เริ่มต้น gcd โดยรับค่า a และ b โดยในกรณีนี้ a คือ 6 และ b คือ 15.
+2.เข้าสู่ while loop ซึ่งตรวจสอบว่า b ไม่เท่ากับ 0. ในขณะนี้, b มีค่าเป็น 15 ซึ่งไม่เท่ากับ 0 ดังนั้นโค้ดเข้าสู่ลูป.
+3.ในแต่ละรอบของ loop:
+สร้างตัวแปรชั่วคราว temp และกำหนดค่า temp ให้เท่ากับ b ซึ่งในขณะนี้ temp มีค่า 15.
+คำนวณค่า b ใหม่โดยใช้เศษจากการหาร a ด้วย b ซึ่งคำนวณเป็น a % b ในกรณีนี้ 6 % 15 เท่ากับ 6. ดังนั้น, b จะกลายเป็น 6.
+คำนวณค่า a ใหม่โดยกำหนด a เป็น temp ซึ่งคือค่าเดิมของ b ซึ่งเป็น 15.
+4.ทำขั้นตอนที่ 3 ซ้ำไปเรื่อย ๆ จนกว่า b จะเป็น 0. การสลับค่า a และ b และคำนวณเศษต่อเนื่องไปจนกว่า b จะกลายเป็น 0 คือส่วนหนึ่งของวิธีการ Euclidean algorithm.
+5.เมื่อ b เป็น 0, ค่า a ที่เหลือเป็น GCD ของ 6 และ 15.
+6.สุดท้าย, ฟังก์ชัน gcd(6, 15) จะคืนค่า a ซึ่งในกรณีนี้เป็น 3.
+
+รอบน่าจะไม่งง 2
+1.ฟังก์ชัน gcd รับค่า a และ b เข้ามาเพื่อคำนวณ GCD ของทั้งสองเลข.
+2.ใน while loop, โค้ดตรวจสอบว่า b ไม่เท่ากับ 0 ดังนั้นจะเข้าสู่วงรอบของ loop ซึ่งทำงานจนกว่า b จะเป็น 0.
+3.ในแต่ละรอบของ loop, โค้ดทำการสร้างตัวแปรชั่วคราว temp และกำหนดค่า temp เป็น b ซึ่งเป็นการเก็บค่า b ไว้.
+4.จากนั้น, โค้ดคำนวณค่า b ใหม่โดยใช้เศษจากการหาร a ด้วย b โดยใช้ a % b. นี่คือขั้นตอนหลักของ Euclidean algorithm.
+5.หลังจากนั้น, โค้ดสลับค่า a และ b โดยกำหนด a เป็น temp ที่เก็บค่าเดิมของ b ไว้.
+6.ทำขั้นตอน 3-5 ซ้ำไปเรื่อย ๆ จนกว่า b จะเป็น 0. เมื่อ b เป็น 0, ค่า a ที่เหลือเป็น GCD ของ a และ b.
+7.สุดท้าย, ฟังก์ชันคืนค่า GCD ที่คำนวณได้.
+
+รอบงงๆ 3
+1.เริ่มต้นโดยรับค่า a และ b เข้ามาในฟังก์ชัน gcd.
+2.เราใช้วงรอบ while เพื่อคำนวณ GCD ของ a และ b โดยที่เงื่อนไขของวงรอบคือ b !== 0 คือเราจะทำวงรอบไปเรื่อย ๆ จนกว่าค่า b จะเป็น 0.
+3.ในแต่ละรอบของวงรอบ while, เราทำการสลับค่า a และ b โดยให้ b รับค่า a % b และ a รับค่า b ที่เราเก็บไว้ในตัวแปรชั่วคราว temp.
+4.การทำการสลับค่า a และ b นี้เป็นการลดค่าของ b ลงไปเรื่อย ๆ จนกว่า b จะเป็น 0. เมื่อ b เป็น 0, a จะเป็น GCD ของ a และ b.
+5.สุดท้าย, เมื่อวงรอบ while สิ้นสุด ฟังก์ชันจะคืนค่า a ที่เป็น GCD ของ a และ b กลับไป.
+*/
+
+function gcd345(a, b) {
+  if (b === 0) {
+    return a;
+  } else {
+    return gcd(b, a % b);
+  }
+}
 
 /* ex.76 Functions call functions
 Write a function sum that takes an array of numbers and returns the sum of these numbers. 
