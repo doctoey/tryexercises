@@ -596,6 +596,83 @@ function gcd345(a, b) {
   }
 }
 
+/* ex.71 break and continue
+Write a function isPrime that checks whether a passed number is prime. In case of a prime number it should return true, otherwise false.
+Example: isPrime(7) should return true and isPrime(8) should return false.
+ */
+
+let isPrime1 = (n) => {
+  if (n < 2) return false;
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i === 0) {
+          return false;
+      }
+  }
+  return true;
+}
+let isPrime2 = (n) => {
+  if (n < 2) return false;
+  for (let i = 2; i <= Math.sqrt(n); i++)
+      if (n % i === 0) return false;
+  return true;
+}
+
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+  
+  if (number <= 3) {
+    return true;
+  }
+  
+  // Check if the number is divisible by 2 or 3
+  if (number % 2 === 0 || number % 3 === 0) {
+    return false;
+  }
+  
+  // Start checking for prime from 5, using 6k +/- 1 rule
+  for (let i = 5; i * i <= number; i += 6) {
+    if (number % i === 0 || number % (i + 2) === 0) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+  
+  if (number <= 3) {
+    return true;
+  }
+  
+  // Check if the number is divisible by 2 or 3
+  if (number % 2 === 0 || number % 3 === 0) {
+    return false;
+  }
+  
+  // Start checking for prime from 5, using 6k +/- 1 rule
+  for (let i = 5; i * i <= number; i += 6) {
+    if (number % i === 0 || number % (i + 2) === 0) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+// isPrime(1) returns false.
+// isPrime(2) returns true.
+// isPrime(3) returns true.
+// isPrime(4) returns false.
+// isPrime(11) returns true.
+// isPrime(281) returns true.
+// isPrime(351) returns false.
+
 /* ex.76 Functions call functions
 Write a function sum that takes an array of numbers and returns the sum of these numbers. 
 Write a function mean that takes an array of numbers and returns the average of these numbers. 
