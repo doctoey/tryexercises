@@ -665,6 +665,25 @@ function isPrime(number) {
   return true;
 }
 
+let isPrime555 = (num) => {
+
+  if (num <= 1) {
+    return false
+  }
+
+  let isPrime = true;
+
+  for (let i = 2; i < num; i++) {
+
+    if (num % i === 0) {
+      isPrime = false
+      break;
+    }
+  }
+
+  return isPrime
+}
+
 // isPrime(1) returns false.
 // isPrime(2) returns true.
 // isPrime(3) returns true.
