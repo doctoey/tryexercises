@@ -596,6 +596,8 @@ function gcd345(a, b) {
   }
 }
 
+
+
 /* ex.71 break and continue
 Write a function isPrime that checks whether a passed number is prime. In case of a prime number it should return true, otherwise false.
 Example: isPrime(7) should return true and isPrime(8) should return false.
@@ -692,6 +694,122 @@ let isPrime555 = (num) => {
 // isPrime(281) returns true.
 // isPrime(351) returns false.
 
+/* ex.72. Nested loops
+Write a function sum that calculates the sum of all elements of a two-dimensional array.
+Example: sum([[1, 2], [3]]) should return 6.
+ */
+
+function sum1(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    const innerArray = arr[i];
+    for (let j = 0; j < innerArray.length; j++) {
+      total += innerArray[j];
+    }
+  }
+  return total;
+}
+
+let sum2 = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      sum = sum + arr[i][j];
+    }
+  }
+  return sum
+}
+
+// sum([[1]]) returns 1.
+// sum([[1, 2], [3]]) returns 6.
+// sum([[1, 2, 3], [1, 2], [1, 2, 3, 4]]) returns 19.
+
+
+
+/* ex.73. The arguments object
+Write a function max that calculates the maximum of an arbitrary number of numbers.
+Example: max(1, 2) should return 2 and max(2, 3, 1) should return 3.
+*/
+
+let max = (...para) => {
+  return Math.max(...para);
+}
+//ใช้ rest parameter (...) เพื่อให้ฟังก์ชันรับค่าจำนวนไม่จำกัด
+
+// max(1) returns 1.
+// max(15, 2) returns 15.
+// max(1, 15, 3) returns 15.
+// max(-1, 0, 9, 8) returns 9.
+
+/* ex.74. NaN
+Write a function parseFirstInt that takes a string and returns the first integer present in the string. If the string does not contain an integer, you should get NaN.
+Example: parseFirstInt('No. 10') should return 10 and parseFirstInt('Babylon') should return NaN.
+*/
+
+function parseFirstInt(str) {
+  let result = '';
+  for (let char of str) {
+    if (!isNaN(char) || char === '-') {
+      result += char;
+    } else if (result) {
+      break;
+    }
+  }
+  return parseInt(result) || NaN;
+}
+// -?: ตัวอักษร - นำหน้าหรือไม่นำหน้าตัวเลข (ใช้ ? ในการบอกว่ามีหรือไม่มี - ก็ได้)
+// \d+: ตัวเลข (0-9) ที่ปรากฏอย่างน้อยหนึ่งครั้งขึ้นไป (ใช้ + ในการบอกว่าตัวเลขมีอย่างน้อยหนึ่งตัวขึ้นไป)
+function parseFirstInt(str) {
+  const matches = str.match(/-?\d+/);
+  return matches ? parseInt(matches[0]) : NaN;
+}
+
+function parseFirstInt(str) {
+  const match = /-?\d+/.exec(str);
+  return match ? parseInt(match[0]) : NaN;
+}
+
+function parseFirstInt(input) {
+
+  let inputToParse = input;
+
+  for (let i = 0; i < input.length; i++) {
+    let firstInt = parseInt(inputToParse);
+    if (!Number.isNaN(firstInt)) {
+      return firstInt;
+    }
+    inputToParse = inputToParse.substr(1);
+  }
+
+  return NaN;
+}
+
+// parseFirstInt('No. 10') returns 10.
+// parseFirstInt('18.12') returns 18.
+// parseFirstInt('Li is 22 years old.') returns 22.
+// parseFirstInt('sum: -120') returns -120.
+// parseFirstInt('a string') returns NaN.
+
+/* ex.75. String: split()
+Write a function add that takes a string with a summation task and returns its result as a number. A finite number of natural numbers should be added. The summation task is a string of the form '1+19+...+281'.
+Example: add('7+12+100') should return 119.
+*/
+
+let add = (str) => {
+  let split = str.split('+');
+  let sum = 0
+  for (let i = 0 ; i < split.length ; i++ ) {
+    sum = sum + parseInt(split[i])
+  }
+  return sum
+}
+
+// add('1+2') returns 3.
+// add('12+5+1+10') returns 28.
+// add('13+2+4+100+3') returns 122.
+// add('50000+4000+300+20+1') returns 54321.
+
+
 /* ex.76 Functions call functions
 Write a function sum that takes an array of numbers and returns the sum of these numbers. 
 Write a function mean that takes an array of numbers and returns the average of these numbers. 
@@ -736,6 +854,17 @@ let sum760 = (arr) => {
     return result / arr.length
   }
 
+  let sum0110 = (arr) => {
+    let sum = 0
+    for (let i = 0 ; i < arr.length ; i++){
+      sum = sum + arr[i]
+    }
+    return sum
+  }
+  
+  let mean0110 = (arr) => {
+    return (sum0110(arr))/arr.length
+  }
 
   // sum([0]) returns 0
   // sum([1, 2]) returns 3.
@@ -747,19 +876,20 @@ let sum760 = (arr) => {
   // mean([1, 4, 10, 85]) returns 25.
   // mean([-2, -4, 17, 34]) returns 11.25.
 
-
   
 /* ex.77 Recursion
 Write a function reverse that reverses the order of the characters in a string. The function should be recursive.
-
 Example: reverse('live') should return 'evil'.
-
 */
 
 let reverse = (ele) => {
   let a = ele.toString().split('').reverse().join('')
   return a
  }
+
+let reverse2 = (str) => {
+  return str.split('').reverse().join('')
+}
  
 // reverse('abc')
 // reverse('') returns ''.
@@ -767,3 +897,34 @@ let reverse = (ele) => {
 // reverse('az') returns 'za'.
 // reverse('12345') returns '54321'.
 // reverse('live') returns 'evil'.
+
+
+/* ex.78. Roman numerals I
+Write a function arabic that converts a Roman number (up to 1000) into an Arabic.
+
+Example: arabic('CDLXXXIII') should return 483.
+*/
+
+function arabic(roman) {
+  const romanNumerals = {
+    'I': 1,
+    'V': 5,
+    'X': 10,
+    'L': 50,
+    'C': 100,
+    'D': 500,
+    'M': 1000
+  };
+
+  let result = 0;
+
+  for (let i = 0; i < roman.length; i++) {
+    if (i < roman.length - 1 && romanNumerals[roman[i]] < romanNumerals[roman[i + 1]]) {
+      result = result - romanNumerals[roman[i]];
+    } else {
+      result = result + romanNumerals[roman[i]];
+    }
+  }
+
+  return result;
+}
