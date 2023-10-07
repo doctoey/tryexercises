@@ -890,6 +890,30 @@ let reverse = (ele) => {
 let reverse2 = (str) => {
   return str.split('').reverse().join('')
 }
+
+let reverse3 = (str) => {
+  let reversed = '';
+  for(let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
+}
+
+let reverse4 = (str) => {
+  if (str === '') {
+    return '';
+  } else {
+    return reverse4(str.substr(1)) + str.charAt(0);
+  }
+}
+
+let reverse5 = (str) => {
+  return str.split('').reduce((reversed, char) => char + reversed, '');
+}
+
+let reverse6 = (str) => {
+  return Array.from(str).reverse().join('');
+}
  
 // reverse('abc')
 // reverse('') returns ''.
