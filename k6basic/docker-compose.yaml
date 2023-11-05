@@ -1,0 +1,86 @@
+version: '3.4'
+
+networks:
+  k6:
+  grafana:
+
+
+services:
+
+  k6:
+    image: grafana/k6:latest
+    stdin_open: true # docker run -i
+    tty: true   
+    networks:
+      - k6
+    ports:
+      - "6565:6565"
+    volumes:
+      - ./scripts:/scripts
+    deploy:
+        resources:
+            limits:
+              cpus: '1'
+              memory: 500M
+            reservations:
+              cpus: '0.20'
+              memory: 15M
+
+  srv01:
+    container_name: app-srv01
+    image: chankx/demo-loadtest-app:latest
+    networks:
+      - k6
+    restart: always
+    ports:
+      - "3001:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500m
+        reservations:
+          cpus: '0.20'
+          memory: 15M
+  srv02:
+    container_name: app-srv02
+    image: chankx/demo-loadtest-app:latest
+    networks:
+      - k6
+    restart: always
+    ports:
+      - "3002:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 500M
+        reservations:
+          cpus: '0.20'
+          memory: 15M
+  srv03:
+    container_name: app-srv03
+    image: chankx/demo-loadtest-app:latest
+    networks:
+      - k6
+    restart: always
+    ports:
+      - "3003:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 500M
+        reservations:
+          cpus: '0.20'
+          memory: 15M
+
+  loadbalancer:
+    container_name: app-loadbalancer
+    image: chankx/demo-nginxlb:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - k6
+    ports:
+      - "8088:80"
