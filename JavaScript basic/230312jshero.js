@@ -784,6 +784,28 @@ function parseFirstInt(input) {
   return NaN;
 }
 
+let parseFirstInt = (inputString) => {
+  // แยก string เป็น array ของคำ
+  let words = inputString.split(' ');
+  
+  // วนผ่านแต่ละคำใน array
+  for (let i = 0; i < words.length; i++) {
+    // แปลงคำเป็นตัวเลข
+    let number = parseInt(words[i]);
+    
+    //อธิบาย
+    // ใน JavaScript, isNaN ใช้เพื่อตรวจสอบว่าค่าที่ให้เป็น NaN (Not-a-Number) หรือไม่ 
+    // ดังนั้น !isNaN(number) จะอ่านว่า "ถ้าค่านี้ไม่ใช่ NaN" ให้ return number
+    // ถ้าเป็นตัวเลขให้ return ค่านั้น
+    if (!isNaN(number)) {
+      return number;
+    }
+  }
+  
+  // ถ้าไม่พบตัวเลขให้ return NaN
+  return NaN;
+}
+
 // parseFirstInt('No. 10') returns 10.
 // parseFirstInt('18.12') returns 18.
 // parseFirstInt('Li is 22 years old.') returns 22.
