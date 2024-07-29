@@ -10,7 +10,7 @@ print("%s, %d years woi!! You have %.2f points" % (name, age, score))
 
 
 
-# 
+#################################
 # first_name = input("Enter your first name: ")
 # last_name = input("Enter your last name: ")
 
@@ -23,7 +23,7 @@ last_name = input("Enter your last name: ")
 # print(f"Hello... {first_name}, {last_name}")
 # print("Hello...." , first_name ,",", last_name) ผิด
 
-# 
+#################################
 fn = input("First name: ")
 sn = input("Surname: ")
 birth = int(input("Year of birth: "))
@@ -39,7 +39,7 @@ print(f"Hi, {fn} {sn}. You are {age} years old.")
 print(f"Your weight is {weight:.2f}, height is {height:.2f} and your BMI is {bmi}.")
 
 
-# 
+################################
 # มา 4 จ่าย 3
 num_customers = int(input("Enter number of customers: "))
 price_per_head = int(input("Enter price per head: "))   
