@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { create } from "zustand";
 import Vote from "./vote";
 import VoteApi from "./VoteApi";
+import Fruits from "./Fruits";
 
 const useBearStore = create((set) => ({
   bears: 0,
@@ -118,10 +119,24 @@ function Home() {
             color: "white",
             padding: "10px 20px",
             borderRadius: "5px",
+            marginRight: "10px",
             display: "inline-block",
           }}
         >
           Go to VoteApi
+        </Link>
+        <Link
+          to="/fruits"
+          style={{
+            textDecoration: "none",
+            backgroundColor: "#007bff",
+            color: "white",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            display: "inline-block",
+          }}
+        >
+          Go to Fruits
         </Link>
       </div>
     </div>
@@ -135,6 +150,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/vote" element={<Vote />} />
         <Route path="/voteapi" element={<VoteApi />} />
+        <Route path="/fruits" element={<Fruits />} />
       </Routes>
     </BrowserRouter>
   );
