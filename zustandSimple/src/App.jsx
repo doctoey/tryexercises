@@ -15,7 +15,9 @@ function BearCounter() {
   const bearCount = useBearStore((state) => state.bears);
   return (
     <div>
-      <h1>{bearCount} bears around here...</h1>
+      <h1 style={{ fontSize: "24px", color: "#333" }}>
+        {bearCount} bears around here...
+      </h1>
     </div>
   );
 }
@@ -25,9 +27,34 @@ function BearControls() {
   const resetBears = useBearStore((state) => state.removeAll);
 
   return (
-    <div>
-      <button onClick={increaseBears}>Add Bear</button>
-      <button onClick={resetBears}>Reset Bears</button>
+    <div style={{ marginTop: "20px" }}>
+      <button
+        onClick={increaseBears}
+        style={{
+          padding: "10px 20px",
+          backgroundColor: "#4CAF50",
+          color: "white",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+          marginRight: "10px",
+        }}
+      >
+        Add Bear
+      </button>
+      <button
+        onClick={resetBears}
+        style={{
+          padding: "10px 20px",
+          backgroundColor: "#f44336",
+          color: "white",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+      >
+        Reset Bears
+      </button>
     </div>
   );
 }
@@ -39,6 +66,7 @@ function Home() {
         padding: "20px",
         maxWidth: "800px",
         margin: "0 auto",
+        fontFamily: "'Arial', sans-serif",
       }}
     >
       <h1
@@ -46,6 +74,8 @@ function Home() {
           textAlign: "center",
           backgroundColor: "#F0FFF0",
           color: "#333",
+          padding: "10px",
+          borderRadius: "8px",
           marginBottom: "30px",
         }}
       >
@@ -58,13 +88,14 @@ function Home() {
           padding: "20px",
           borderRadius: "8px",
           marginBottom: "20px",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         }}
       >
         <BearCounter />
         <BearControls />
       </div>
 
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
         <Link
           to="/vote"
           style={{
@@ -73,6 +104,7 @@ function Home() {
             color: "white",
             padding: "10px 20px",
             borderRadius: "5px",
+            marginRight: "10px",
             display: "inline-block",
           }}
         >
