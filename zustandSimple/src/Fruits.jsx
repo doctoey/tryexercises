@@ -1,19 +1,25 @@
 import React, { useRef } from "react";
 import { create } from "zustand";
 import { Link } from "react-router-dom";
+import { persist } from "zustand/middleware";
 
-const useFruitsStore = create((set) => ({
-  fruits: ["banana", "orange", "apple"],
-  addFruits: (fruit) => {
-    set((state) => ({
-      fruits: [...state.fruits, fruit],
-    }));
-  },
-}));
+const useStore = create(
+  persist(
+    (set) => ({
+      fruits: ["banana", "orange", "apple"],
+      addFruits: (fruit) => {
+        set((state) => ({
+          fruits: [...state.fruits, fruit],
+        }));
+      },
+    }),
+    { name: "basket" }
+  )
+);
 
 function Fruits() {
-  const fruits = useFruitsStore((state) => state.fruits);
-  const addFruits = useFruitsStore((state) => state.addFruits);
+  const fruits = useStore((state) => state.fruits);
+  const addFruits = useStore((state) => state.addFruits);
   const inputRef = useRef();
 
   const addFruit = () => {
@@ -72,6 +78,7 @@ function Fruits() {
             marginRight: "10px",
             fontSize: "16px",
             backgroundColor: "#f5f5f5",
+            color: "#333",
           }}
         />
         <button
