@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { create } from "zustand";
 
-function App() {
-  const [count, setCount] = useState(0)
+const useBearStore = create((set) => ({
+  bears: 0,
+  increase: () => set((state) => ({ bears: state.bears + 1 })),
+  removeAll: () => set({ bears: 0 }),
+  update: (newCount) => set({ bears: newCount }),
+}));
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function BearCounter() {
+  const bearCount = useBearStore((state) => state.bears);
+  return <h1>{bearCount} bears around here...</h1>;
 }
 
-export default App
+function BearControls() {
+  const increaseBears = useBearStore((state) => state.increase);
+  const resetBears = useBearStore((state) => state.removeAll);
+
+  return (
+    <div>
+      <button onClick={increaseBears}>Add Bear</button>
+      <button onClick={resetBears}>Reset Bears</button>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <h1>Zustand Version I</h1>
+      <BearCounter />
+      <BearControls />
+    </>
+  );
+}
+
+export default App;
