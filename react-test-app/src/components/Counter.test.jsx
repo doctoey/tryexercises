@@ -17,6 +17,8 @@ describe("test Counter component", () => {
   it("should render counter", () => {
     // พึ่งพา screen ทำการหา dom
     // check Counter: มีอยู่จริง คือ toBeInTheDocument
+    // screen.getByText(/Counter:/) เป็นคำสั่งสำหรับการค้นหา DOM ที่อยู่บน Screen ที่ใส่คำนี้ไว้
+    // .toBeInTheDocument() เป็นคำสั่งสำหรับการเช็คว่าสิ่งนั้นเจอหรือไม่เจอ (ใช้คู่กับคำสั่งค้นหา DOM)
     expect(screen.getByText(/Counter:/)).toBeInTheDocument();
   });
 
