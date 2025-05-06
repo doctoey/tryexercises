@@ -3,12 +3,15 @@ import { render, fireEvent, waitFor } from "@testing-library/react";
 import RegisterForm from "./RegisterForm";
 import axios from "axios";
 
+// https://testing-library.com/docs/dom-testing-library/cheatsheet
 // Mock axios to avoid real API calls
 vi.mock("axios");
 
 describe("RegisterForm component", () => {
+  // ก่อนที่จะรันทุก case ใช้ beforeAll ได้เลย รันแค่รอบเดียวตอน start ทุก test
   beforeAll(() => {
     // Mock window.alert
+    // global.windows.alert = vi.fn();
     vi.stubGlobal("alert", vi.fn());
     // Mock console.log
     vi.spyOn(console, "log").mockImplementation(() => {});
@@ -21,6 +24,8 @@ describe("RegisterForm component", () => {
 
   it("renders the form", () => {
     const { getByLabelText, getByText } = render(<RegisterForm />);
+    // ขอแค่มีคำนี้ ไม่สนเล็กใหญ่ regular expression
+    // https://testing-library.com/docs/dom-testing-library/cheatsheet
     expect(getByLabelText(/name/i)).toBeInTheDocument();
     expect(getByLabelText(/email/i)).toBeInTheDocument();
     expect(getByLabelText(/phone number/i)).toBeInTheDocument();
@@ -58,6 +63,7 @@ describe("RegisterForm component", () => {
       target: { value: "John Doe" },
     });
     fireEvent.change(getByLabelText(/email/i), {
+      // format email ผิด !!
       target: { value: "johndoe@example" },
     });
     fireEvent.change(getByLabelText(/phone number/i), {

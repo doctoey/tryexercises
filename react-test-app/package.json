@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "test": "npx vitest --coverage",
+    "test:cover": "npx vitest --coverage",
+    "open": "open coverage/index.html ",
     "lint": "eslint .",
     "preview": "vite preview"
   },
